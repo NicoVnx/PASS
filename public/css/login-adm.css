@@ -7,6 +7,8 @@ ul#login{
 ul#login #flex-login{
 
     display: flex;
+    height: 82px;
+    background-color: transparent;
 
 }
 
@@ -15,16 +17,11 @@ ul#login #flex-login #user-flex-login {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color:rgb(0, 20, 63);
+    background-color:transparent;
 
     
 }
 
-#flex-login{
-
-    height: 82px;
-
-}
 
 
 #local-login{
@@ -42,7 +39,7 @@ ul#login #flex-login #user-flex-login {
     height: 70%;
     margin: auto;
     margin-top: 100px;
-    background-color: rgb(0, 20, 63);
+    background-image: linear-gradient(to bottom, rgb(2, 28, 83) , rgb(0, 20, 63));
 
     padding: 70px 30px;
     
@@ -74,6 +71,17 @@ ul#login #flex-login #user-flex-login {
 
 }
 
+li{
+
+    background-color: transparent;
+}
+
+li label{
+
+    margin-right: 20px;
+
+}
+
 #title-login i{
 
 background-color: transparent;
@@ -100,6 +108,7 @@ margin-left: 30px;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    background-color: transparent;
     
 }
 
@@ -108,12 +117,13 @@ ul#login #flex-login #input-flex-login {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color:rgb(0, 20, 63)
+    background-color:transparent
 }
 
 #login label{
 
     color: white;
+    
     
 
 }
@@ -138,7 +148,7 @@ ul#login #flex-login #input-flex-login {
 #login input:focus{
 
     color: rgb(255, 255, 255);
-
+    border-bottom: 2px  solid rgb(0, 71, 151);
     border-radius: 10px;
     width: 220px;
     transition: 0.25s;

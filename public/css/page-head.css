@@ -1,6 +1,12 @@
 *{
 
-    background-color: rgb(185, 215, 250);
+    background-color: transparent;
     font-family: 'montserrat';
+
+}
+
+body{
+
+    background-color:  rgb(185, 215, 250);
 
 }

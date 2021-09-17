@@ -1,5 +1,5 @@
-<%- include('parts/page-head', { title : 'Pacotes', linkCSS : 'css/home.css', linkCSS2 : '', linkCSS3 : ''}) %>
-
+<%- include('parts/page-head', { title : 'Contato', linkCSS : 'css/contato.css', linkCSS2 : '', linkCSS3 : ''}) %>
+<script src="/script/contato.js"></script>
 <body>
     
     <!--Header-->
@@ -9,7 +9,62 @@
 
     <!--Header-->
 
-    Contato
+    <div class="container-contato">
+
+        <div class="content-contato">
+
+            <h2>Faça seu Pedido</h2>
+
+            <form id="contato" action="" method="POST">
+
+                <div class="cont i">
+
+                    <ul class="separator pessoais">
+
+                        <li><label for="nome-completo">Nome Completo</label>
+                        <input placeholder="Digite seu nome completo" id="nome-completo" type="text"></li>
+                        <li><label for="email">Email</label>
+                        <input placeholder="Digite seu email" id="email" type="email"></li>
+                        <li><label for="cpf">CPF</label>
+                        <input placeholder="Digite seu CPF" id="cpf" type="number"></li>
+                        <li><label for="data-nasc">Data de Nascimento</label>
+                        <input placeholder="Digite sua data de nascimento" id="data-nasc" type="date"></li>  
+
+                    </ul>
+
+                    <ul class="separator endereco">
+
+                        <li><label for="cep">CEP</label>
+                        <input placeholder="Digite seu CEP" id="cep" type="number"></li>
+                        <li><label for="estado">Estado</label>
+                        <input placeholder="Digite seu estado" id="estado" type="text"></li>
+                        <li><label for="cidade">Cidade</label>
+                        <input placeholder="Digite sue cidade" id="cidade" type="text"></li>
+                        <li><label for="bairro">Bairro</label>
+                        <input placeholder="Digite seu bairro" id="bairro" type="text"></li>
+                        <li><label for="rua">Rua</label>
+                        <input placeholder="Digite sua rua" id="rua" type="text"></li>
+                        <li><label for="numero">Número</label>
+                        <input placeholder="Digite seu número" id="numero" type="number"></li>                 
+
+                    </ul>
+
+                </div>
+
+                <div class="cont ii">
+                    <h2>Escolha aqui seu plano de viagem</h2>
+                </div>
+
+
+            </form>
+
+            <div class="btns"><button type="menu" class="voltar hide" > <i class="fas fa-arrow-left"></i></button>
+
+            <button type="menu" class="avancar" ><i class="fas fa-arrow-right"></i></button></div>
+
+        </div>
+
+    </div>
 
 </body>
 </html>
