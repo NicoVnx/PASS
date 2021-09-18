@@ -1,8 +1,7 @@
-
 .container-contato{
 
     background-color: transparent;
-    height: 75vh;
+    height: 130vh;
     width: 45%;
     margin: auto;
     
@@ -33,29 +32,20 @@
     border-radius: 20px;
 }
 
+
+
 .content-contato h2{
 
     font-size: 50px;
     color: rgb(255, 255, 255);
-
-
     margin-bottom: 80px;
-    background-color: transparent;
-
-}
-
-.content-contato p{
-
-    
     background-color: transparent;
 
 }
 
 .content-contato input, .content-contato label, .content-contato button{
 
-    background-color: transparent;
     color: white;
-    
 
 }
 
@@ -66,32 +56,9 @@ input:focus, label:focus, button:focus{
 
 }
 
-.content-contato button{
-
-    border: 0;
-    color: rgb(255, 255, 255);
-    border-radius: 20px;
-    font-size: 20px;
-    margin-top: 20px;
-    margin-left: 800px;
-    background-color: transparent;
-
-}
-
-.content-contato button:hover{
-
-    border-radius: 20px;
-    color: rgb(70, 221, 0);
-    font-size: 21px;
-    transition: 0.25s;
-    cursor: pointer;
-
-}
-
 .content-contato input{
 
     color: rgb(255, 255, 255);
-    
     border-bottom: 2px  solid rgb(255, 255, 255);
     border-top: 0;
     border-left: 0;
@@ -100,8 +67,6 @@ input:focus, label:focus, button:focus{
     width: 200px;
     padding: 3px;
     outline-style: none;
-
-    background-color: transparent;
 
 }
 
@@ -123,86 +88,15 @@ input:focus, label:focus, button:focus{
 
 }
 
-.btns{
 
-    display: flex;
-    margin-right: 800px;
-
-}
-
-.voltar{
-
-    opacity: 1;
-    visibility: visible;
-    transition: visibility 1s, opacity 1s;
-
-}
-
-.voltar.hide{
-
-    opacity: 0;
-    visibility: hidden;
-    transition: visibility 1s, opacity 1s;
-
-}
 
 form#contato{
 
     width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-
-
-}
-
-
-.cont.i{
-
-    opacity: 1;
-    visibility: visible;
-    transition: margin 1s ,visibility 1s, opacity 1s;
-    width: 800px;
-    margin-left: 100px;
-
-
-}
-
-.cont.i.hide{
-
-    margin-left: -850px;
-    opacity: 0;
-    visibility: hidden;
-    transition: margin 1s, visibility 1s, opacity 1s;
-
-}
-
-.cont.ii{
-
-    margin-left: 200px;
-    opacity: 0;
-    visibility: hidden;
-    transition: margin 1s, visibility 1s, opacity 1s;
-    
-
-}
-
-.cont.ii.show {
-
-    opacity: 1;
-    visibility: visible;
-    transition: visibility 1s, opacity 1s;
-
-}
-
-.cont{
-
-    
-    display: flex;
-    height: 500px;
-    width: 100%;
     justify-content: space-between;
-    
+    flex-direction: column;
+    align-items: center;
 
 }
 
@@ -216,7 +110,7 @@ form#contato{
 
 }
 
-.cont .separator{
+.separator{
 
     display: flex;
     flex-direction: column;
@@ -226,17 +120,95 @@ form#contato{
 
 }
 
-.separator.pessoais{
 
-    margin-right: 300px;
+
+.cont{
+
+    display: flex;
+    height: 500px;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+
+.cont p{
+
+    color:aliceblue
+
+}
+
+.cont.i{
+
+    width: 80%;
+
+}
+
+.cont.ii{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+}
+
+.cont.ii h2{
+
+    margin: 60px 0;
+    width: 100%;
+    font-size: 27px;
+
+}
+
+.cont.ii .planos{
+
+    width: 72%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.cont.ii .planos .plano{
+
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 255, 255);
+    transition: 0.5s;
+
+}
+
+i.far{
+
+    color: rgb(0, 204, 10); 
 
 }
 
 
 
+button.submit{
 
+    border: 0;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 800px;
 
+}
 
+button.submit:hover{
+
+    border-radius: 20px;
+    color: rgb(70, 221, 0);
+    font-size: 21px;
+    transition: 0.25s;
+    cursor: pointer;
+
+}
 
 
 

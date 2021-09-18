@@ -10,3 +10,9 @@ body{
     background-color:  rgb(185, 215, 250);
 
 }
+
+ul, li, a, i, p, h1, h2, h3, nav, header{
+
+    background-color: transparent;
+
+}

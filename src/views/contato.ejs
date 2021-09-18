@@ -1,5 +1,6 @@
 <%- include('parts/page-head', { title : 'Contato', linkCSS : 'css/contato.css', linkCSS2 : '', linkCSS3 : ''}) %>
-<script src="/script/contato.js"></script>
+<script src="/script/validacao.js"></script>
+
 <body>
     
     <!--Header-->
@@ -15,7 +16,7 @@
 
             <h2>Faça seu Pedido</h2>
 
-            <form id="contato" action="" method="POST">
+            <form id="contato" action="" method="POST" onSubmit = "return validar(this)" >
 
                 <div class="cont i">
 
@@ -26,9 +27,9 @@
                         <li><label for="email">Email</label>
                         <input placeholder="Digite seu email" id="email" type="email"></li>
                         <li><label for="cpf">CPF</label>
-                        <input placeholder="Digite seu CPF" id="cpf" type="number"></li>
+                        <input placeholder="Digite seu CPF" id="cpf" type="number" maxlength="11" minlength="11"></li>
                         <li><label for="data-nasc">Data de Nascimento</label>
-                        <input placeholder="Digite sua data de nascimento" id="data-nasc" type="date"></li>  
+                        <input placeholder="Digite sua data de nascimento" id="data-nasc" type="date" ></li>  
 
                     </ul>
 
@@ -52,15 +53,44 @@
                 </div>
 
                 <div class="cont ii">
+
                     <h2>Escolha aqui seu plano de viagem</h2>
+
+                    <div class="planos">
+
+                        <div class="plano i">
+
+                            <p>aaa</p>
+                            <input type="radio" class="check" name="check" required> 
+                            <label for="planoi"><i class="far fa-check-circle" ></i></label>
+
+                        </div>
+
+                        <div class="plano ii">
+
+                            <p>aaa</p>
+                            <input type="radio" class="check" name="check">
+                            <label for="planoii"><i class="far fa-check-circle" ></i></label>
+
+                        </div>
+
+                        <div class="plano iii">
+
+                            <p>aaa</p>
+                            <input type="radio" class="check" name="check">
+                            <label for="planoiii"><i class="far fa-check-circle" ></i></label>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
+                <button type="submit" class="submit">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
 
             </form>
-
-            <div class="btns"><button type="menu" class="voltar hide" > <i class="fas fa-arrow-left"></i></button>
-
-            <button type="menu" class="avancar" ><i class="fas fa-arrow-right"></i></button></div>
 
         </div>
 
