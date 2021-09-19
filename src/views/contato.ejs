@@ -16,37 +16,37 @@
 
             <h2>Faça seu Pedido</h2>
 
-            <form id="contato" action="" method="POST" onSubmit = "return validar(this)" >
+            <form id="contato" action="/contato" method="POST" onSubmit = "return validar(this)" >
 
                 <div class="cont i">
 
                     <ul class="separator pessoais">
 
                         <li><label for="nome-completo">Nome Completo</label>
-                        <input placeholder="Digite seu nome completo" id="nome-completo" type="text"></li>
+                        <input placeholder="Digite seu nome completo" name="nomeCompleto" type="text"></li>
                         <li><label for="email">Email</label>
-                        <input placeholder="Digite seu email" id="email" type="email"></li>
+                        <input placeholder="Digite seu email" name="email" type="email"></li>
                         <li><label for="cpf">CPF</label>
-                        <input placeholder="Digite seu CPF" id="cpf" type="number" maxlength="11" minlength="11"></li>
+                        <input placeholder="Digite seu CPF" name="cpf" type="number" maxlength="11" minlength="11"></li>
                         <li><label for="data-nasc">Data de Nascimento</label>
-                        <input placeholder="Digite sua data de nascimento" id="data-nasc" type="date" ></li>  
+                        <input placeholder="Digite sua data de nascimento" name="dataNasc" type="date" ></li>  
 
                     </ul>
 
                     <ul class="separator endereco">
 
                         <li><label for="cep">CEP</label>
-                        <input placeholder="Digite seu CEP" id="cep" type="number"></li>
+                        <input placeholder="Digite seu CEP" name="cep" type="number"></li>
                         <li><label for="estado">Estado</label>
-                        <input placeholder="Digite seu estado" id="estado" type="text"></li>
+                        <input placeholder="Digite seu estado" name="estado" type="text"></li>
                         <li><label for="cidade">Cidade</label>
-                        <input placeholder="Digite sue cidade" id="cidade" type="text"></li>
+                        <input placeholder="Digite sue cidade" name="cidade" type="text"></li>
                         <li><label for="bairro">Bairro</label>
-                        <input placeholder="Digite seu bairro" id="bairro" type="text"></li>
+                        <input placeholder="Digite seu bairro" name="bairro" type="text"></li>
                         <li><label for="rua">Rua</label>
-                        <input placeholder="Digite sua rua" id="rua" type="text"></li>
+                        <input placeholder="Digite sua rua" name="rua" type="text"></li>
                         <li><label for="numero">Número</label>
-                        <input placeholder="Digite seu número" id="numero" type="number"></li>                 
+                        <input placeholder="Digite seu número" name="numero" type="number"></li>                 
 
                     </ul>
 

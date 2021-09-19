@@ -1,16 +1,16 @@
 function validar (){
 
-    const nome = document.getElementById("nome-completo")
-    const email = document.getElementById("email")
-    const cpf = document.getElementById("cpf")
-    const dataNasc = document.getElementById("data-nasc")
+    const nome = document.getElementsByName("nomeCompleto")
+    const email = document.getElementByName("email")
+    const cpf = document.getElementByName("cpf")
+    const dataNasc = document.getElementByName("dataNasc")
 
-    const cep = document.getElementById("cep")
-    const estado = document.getElementById("estado")
-    const cidade = document.getElementById("cidade")
-    const bairro = document.getElementById("bairro")
-    const rua = document.getElementById("rua")
-    const numero = document.getElementById("numero")
+    const cep = document.getElementByName("cep")
+    const estado = document.getElementByName("estado")
+    const cNameade = document.getElementByName("cNameade")
+    const bairro = document.getElementByName("bairro")
+    const rua = document.getElementByName("rua")
+    const numero = document.getElementByName("numero")
 
     const radio = document.querySelectorAll("input[type=radio]:checked")
     
@@ -65,8 +65,8 @@ function validar (){
 
       if(cidade.value == ""){
   
-        alert('Preencha o campo Cidade')
-        cidade.focus()
+        alert('Preencha o campo CNameade')
+        cNameade.focus()
         return false
     
       }
