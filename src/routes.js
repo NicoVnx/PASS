@@ -4,21 +4,62 @@ const views = __dirname + "/views/"
 const mongoose = require("mongoose")
 require('./models/Pedido')
 const Pedido = mongoose.model('pedidos')
+var erros = []
 
+    
 
   routes.get("/", (req, res) => res.render(views + "home", {}))
 
-  routes.get("/contato", (req, res) => res.render(views + "contato"))
+  routes.get("/contato", (req, res) => {
+
+    if(erros.length >= 1){
+    
+      for(var i = 0; i = erros.length; i++){
+        erros.shift()
+      }
+    }
+
+    var nomeC = req.body.nomeCompleto
+    var email = req.body.email
+    var cpf = req.body.cpf
+    var dataN = req.body.dataNasc
+    var cep = req.body.cep
+    var estado = req.body.estado
+    var cidade = req.body.cidade
+    var bairro = req.body.bairro
+    var rua = req.body.rua
+    var numero = req.body.numero
+
+  res.render(views + "contato", {erros: erros, nomeC, email, cpf, dataN, cep, estado, cidade, bairro, rua, numero})
+})
   routes.post("/contato", (req, res) =>{ 
 
-    var erros = []
+    var nomeC = req.body.nomeCompleto
+    var email = req.body.email
+    var cpf = req.body.cpf
+    var dataN = req.body.dataNasc
+    var cep = req.body.cep
+    var estado = req.body.estado
+    var cidade = req.body.cidade
+    var bairro = req.body.bairro
+    var rua = req.body.rua
+    var numero = req.body.numero
+
+    if(erros.length >= 1){
+    
+    for(var i = 0; i = erros.length; i++){
+      erros.shift()
+    }
+  }
 
     var validateEmail = function(email) {
       var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
       return re.test(email)
   };
 
-    if(!req.body.nomeCompleto || typeof req.body.nomeCompleto == undefined || req.body.nomeCompleto == null) {erros.push({texto: "Nome inválido"})}
+    if(!req.body.nomeCompleto || typeof req.body.nomeCompleto == undefined || req.body.nomeCompleto == null) {
+      erros.push({texto: "Nome inválido"})
+    }
     else if(req.body.nomeCompleto.length < 4) {erros.push({texto: "Nome muito curto, mínimo de 4 dígitos"})}
     else if(req.body.nomeCompleto.length > 30) {erros.push({texto: "Nome muito longo, máximo de 30 dígitos"})}
 
@@ -97,18 +138,24 @@ const Pedido = mongoose.model('pedidos')
 
     if(!req.body.estado || typeof req.body.estado == undefined || req.body.estado == null) {erros.push({texto: "Estado inválido"})}
 
+    if(!req.body.cidade || typeof req.body.cidade == undefined || req.body.cidade == null) {erros.push({texto: "Cidade inválida"})}
+
     if(!req.body.bairro || typeof req.body.bairro == undefined || req.body.bairro == null) {erros.push({texto: "Bairro inválido"})}
 
-    if(!req.body.rua || typeof req.body.rua == undefined || req.body.rua == null) {erros.push({texto: "Rua inválido"})}
+    if(!req.body.rua || typeof req.body.rua == undefined || req.body.rua == null) {erros.push({texto: "Rua inválida"})}
 
     if(!req.body.numero || typeof req.body.numero == undefined || req.body.numero == null || req.body.numero <= 0) {erros.push({texto: "Numero inválido"})}
 
      if(!req.body.check || typeof req.body.check == undefined || req.body.check == null || req.body.check.length <= 0){erros.push({texto: "Selecione ao menos um plano!"})}
 
+     
+
     if(erros.length > 0 ){
 
-        res.render(views + "parts/erros", {erros: erros})
+        res.render(views + "contato", {erros: erros, nomeC, email, cpf, dataN, cep, estado, cidade, bairro, rua, numero})
         console.log(erros)
+        
+        
       
 
     }else{

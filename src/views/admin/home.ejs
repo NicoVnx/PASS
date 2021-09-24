@@ -1,24 +1,32 @@
-<%- include('../parts/page-head', { title : 'Login ADM', linkCSS : '../css/login-adm.css', linkCSS2 : '../css/page-head.css', linkCSS3 : '../css/normalize.css'}) %>
+<%- include('../parts/page-head', { title : 'Login ADM', linkCSS : '../css/home-adm.css', linkCSS2 : '../css/page-head.css', linkCSS3 : '../css/normalize.css'}) %>
 <body>
     <%- include('../parts/page-header') %>
 
     <div class="container homeAdm">
-   <h2>Pedidos realizados pelos usuários</h2>
 
-<ul>
-
-    
+   <h2>Pedidos realizados pelos usuários</h2> 
         
-
+<div class= 'pedidos'>
     <% pedidos.forEach(pedido => { %>
-     <h1><%= pedido.nomeCompleto %> </h1>
-     <h2><%= pedido.email %> </h2>
-    <% }) %>
+        
+        <div class="pedido">
+     <p>Nome - <%= pedido.nomeCompleto %> </p>
+     <p>Email - <%= pedido.email %> </p>
+     <p>CPF - <%= pedido.cpf %> </p>
+     <p>Data Nascimento - <%= pedido.dataNasc %> </p>
 
-    <li>aaa</li>
-    <li>bbb</li>
-    <li>ccc</l>
-</ul>
+     <p>CEP - <%= pedido.cep %> </p>
+     <p>Estado - <%= pedido.estado %> </p>
+     <p>Cidade - <%= pedido.cidade %> </p>
+     <p>Bairro - <%= pedido.bairro %> </p>
+     <p>Rua - <%= pedido.rua %> </p>
+     <p>Número - <%= pedido.numero %> </p>
+
+     <p>Plano - <%= pedido.check %> </p>
+    </div>
+    <% }) %>
+</div>
+
 
     </div>
 
