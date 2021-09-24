@@ -6,6 +6,15 @@
    <h2>Pedidos realizados pelos usuários</h2>
 
 <ul>
+
+    
+        
+
+    <% pedidos.forEach(pedido => { %>
+     <h1><%= pedido.nomeCompleto %> </h1>
+     <h2><%= pedido.email %> </h2>
+    <% }) %>
+
     <li>aaa</li>
     <li>bbb</li>
     <li>ccc</l>

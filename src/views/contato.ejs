@@ -1,5 +1,7 @@
 <%- include('parts/page-head', { title : 'Contato', linkCSS : 'css/contato.css', linkCSS2 : '', linkCSS3 : ''}) %>
-<script src="/script/validacao.js"></script>
+<script src="/script/validaca.js"></script>
+<script src="/script/mask.js"></script>
+
 
 <body>
     
@@ -16,37 +18,40 @@
 
             <h2>Faça seu Pedido</h2>
 
-            <form id="contato" action="/contato" method="POST" onSubmit = "return validar(this)" >
+            
+
+
+            <form id="contato" action="/contato" method="POST" >
 
                 <div class="cont i">
 
                     <ul class="separator pessoais">
 
                         <li><label for="nome-completo">Nome Completo</label>
-                        <input placeholder="Digite seu nome completo" name="nomeCompleto" type="text"></li>
+                        <input placeholder="Digite seu nome completo" name="nomeCompleto" type="text" minlength="4" maxlength="30" ></li>
                         <li><label for="email">Email</label>
-                        <input placeholder="Digite seu email" name="email" type="email"></li>
+                        <input placeholder="Digite seu email" name="email" type="email" ></li>
                         <li><label for="cpf">CPF</label>
-                        <input placeholder="Digite seu CPF" name="cpf" type="number" maxlength="11" minlength="11"></li>
+                        <input onInput= "mask(this, 'cpf')" id="cpf" type="text" placeholder="Ex.: xxx.xxx.xxx-xx"  name="cpf" maxlength="14"></li>
                         <li><label for="data-nasc">Data de Nascimento</label>
-                        <input placeholder="Digite sua data de nascimento" name="dataNasc" type="date" ></li>  
+                        <input onInput= "mask(this, 'data')" id="data-nasc" type="text" placeholder="Ex.: dd/mm/aaaa"  name="dataNasc">  
 
                     </ul>
 
                     <ul class="separator endereco">
 
                         <li><label for="cep">CEP</label>
-                        <input placeholder="Digite seu CEP" name="cep" type="number"></li>
+                        <input onInput="mask(this, 'cep')" id="cep" type="text" placeholder="Ex.: xxxxx-xxx"  name="cep" maxlength="8" ></li>
                         <li><label for="estado">Estado</label>
-                        <input placeholder="Digite seu estado" name="estado" type="text"></li>
+                        <input placeholder="Digite seu estado" name="estado" type="text" ></li>
                         <li><label for="cidade">Cidade</label>
-                        <input placeholder="Digite sue cidade" name="cidade" type="text"></li>
+                        <input placeholder="Digite sue cidade" name="cidade" type="text" ></li>
                         <li><label for="bairro">Bairro</label>
-                        <input placeholder="Digite seu bairro" name="bairro" type="text"></li>
+                        <input placeholder="Digite seu bairro" name="bairro" type="text" ></li>
                         <li><label for="rua">Rua</label>
-                        <input placeholder="Digite sua rua" name="rua" type="text"></li>
+                        <input placeholder="Digite sua rua" name="rua" type="text" ></li>
                         <li><label for="numero">Número</label>
-                        <input placeholder="Digite seu número" name="numero" type="number"></li>                 
+                        <input placeholder="Digite seu número" name="numero" type="text" ></li>                 
 
                     </ul>
 
@@ -60,25 +65,25 @@
 
                         <div class="plano i">
 
-                            <p>aaa</p>
-                            <input type="radio" class="check" name="check" required> 
-                            <label for="planoi"><i class="far fa-check-circle" ></i></label>
+                            
+                            <input type="radio" class="check" name="check" id="planoi"  value="aaa" > 
+                            <label for="planoi"><i class="far fa-check-circle" ></i>aaa</label>
 
                         </div>
 
                         <div class="plano ii">
 
-                            <p>aaa</p>
-                            <input type="radio" class="check" name="check">
-                            <label for="planoii"><i class="far fa-check-circle" ></i></label>
+                            
+                            <input type="radio" class="check" name="check" id="planoii" value="bbb">
+                            <label for="planoii"><i class="far fa-check-circle" ></i>bbb</label>
 
                         </div>
 
                         <div class="plano iii">
 
-                            <p>aaa</p>
-                            <input type="radio" class="check" name="check">
-                            <label for="planoiii"><i class="far fa-check-circle" ></i></label>
+                            
+                            <input type="radio" class="check" name="check" id="planoiii" value="ccc">
+                            <label for="planoiii"><i class="far fa-check-circle" ></i>ccc</label>
 
                         </div>
 
@@ -91,7 +96,7 @@
                 </button>
 
             </form>
-
+    
         </div>
 
     </div>

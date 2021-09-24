@@ -7,13 +7,15 @@ function validar (){
 
     const cep = document.getElementByName("cep")
     const estado = document.getElementByName("estado")
-    const cNameade = document.getElementByName("cNameade")
+    const cidade = document.getElementByName("cidade")
     const bairro = document.getElementByName("bairro")
     const rua = document.getElementByName("rua")
     const numero = document.getElementByName("numero")
 
     const radio = document.querySelectorAll("input[type=radio]:checked")
-    
+
+    const data = Date.now()
+
     
     if(nome.value == ""){
   
@@ -23,7 +25,7 @@ function validar (){
     
       }
       
-      if(email.value == "" || email.value.indexOf('@') == -1 ){
+      if(email.value == "" || email.value.indexOf('@') == -1 || email.value.indexOf('.') == -1 ){
   
         alert('Preencha o campo Email')
         email.focus()
@@ -47,12 +49,31 @@ function validar (){
     
       }
 
-      if(cep.value == ""){
+      let nasc18 = dataNasc.value.split("-").map(Number);
+      let depois18Anos = new Date(nasc18[0] + 18, nasc18[1] - 1, nasc18[2]);
+      let agora = new Date();
+  
+      if (depois18Anos > agora){
+        alert('Você precisa ser maior de idade para fazer um pedido')
+        console.log('menor de idade')
+        dataNasc.focus()
+        return false
+      }
+
+      if(cep.value == "" ){
   
         alert('Preencha o campo CEP')
         cep.focus()
         return false
     
+      }
+
+      if(cep.value !== /^[0-9]{2}\.[0-9]{3}-[0-9]{3}$/ ){
+
+        alert('CEP inválido')
+        cep.focus()
+        return false
+
       }
 
       if(estado.value == ""){

@@ -10,49 +10,60 @@ console.log("MongoDB Conectado...")
 console.log("Houve um erro ao se conectar: " + erro)
 })*/
 
+
 const PedidoSchema = mongoose.Schema({
 
     nomeCompleto:{
         type: String,
-        require: true
+        unique: false,
+        lowercase: true,
     },
     email:{
         type: String,
         require: true,
-        unique: true,
-        lowercase: true
+        lowercase: true,
+        
     },
     cpf:{
-        type: Number,
+        type: String,
         require: true,
     },
     dataNasc:{
-        type: Date,
+        type: String,
         require: true,
     },
 
     cep:{
-        type: Number,
+        type: String,
         require: true,
     },
     estado:{
         type: String,
         require: true,
+        lowercase: true,
     },
     cidade:{
         type: String,
+        lowercase: true,
         require: true,
     },
     bairro:{
         type: String,
+        lowercase: true,
         require: true,
     },
     rua:{
         type: String,
+        lowercase: true,
         require: true,
     },
     numero:{
-        type: Number,
+        type: String,
+        require: true,
+    },
+    check:{
+        type: String,
+        lowercase: true,
         require: true,
     },
 })
@@ -66,7 +77,16 @@ const pedidoOne = newPedido
 new pedidoOne({
 
     nomeCompleto: "ola mundo",
-    email: "eu@eu.com"
+    email: "eu@eu.com",
+    cpf: "48895546881",
+    dataNasc: "01/01/2002",
+    cep: "13290000",
+    estado: '1',
+    cidade: "1",
+    bairro: "1",
+    rua: "1",
+    numero: "1",
+    check: "a"
 
 }).save()
 .then(() => {
