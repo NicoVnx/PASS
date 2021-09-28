@@ -4,13 +4,16 @@ const views = __dirname + "/views/"
 const mongoose = require("mongoose")
 require('./models/Pedido')
 const Pedido = mongoose.model('pedidos')
-var erros = []
+const nodemailer = require('nodemailer')
 
+var erros = []
+var sucesso
     
 
   routes.get("/", (req, res) => res.render(views + "home", {}))
 
   routes.get("/contato", (req, res) => {
+    sucesso = 1
 
     if(erros.length >= 1){
     
@@ -21,7 +24,7 @@ var erros = []
 
     var nomeC = req.body.nomeCompleto
     var email = req.body.email
-    var cpf = req.body.cpf
+    var cpfF = req.body.cpf
     var dataN = req.body.dataNasc
     var cep = req.body.cep
     var estado = req.body.estado
@@ -29,14 +32,15 @@ var erros = []
     var bairro = req.body.bairro
     var rua = req.body.rua
     var numero = req.body.numero
+    var check = req.body.check
 
-  res.render(views + "contato", {erros: erros, nomeC, email, cpf, dataN, cep, estado, cidade, bairro, rua, numero})
+  res.render(views + "contato", {sucesso, erros: erros, nomeC, email, cpfF, dataN, cep, estado, cidade, bairro, rua, numero})
 })
   routes.post("/contato", (req, res) =>{ 
 
     var nomeC = req.body.nomeCompleto
     var email = req.body.email
-    var cpf = req.body.cpf
+    var cpfF = req.body.cpf
     var dataN = req.body.dataNasc
     var cep = req.body.cep
     var estado = req.body.estado
@@ -44,6 +48,7 @@ var erros = []
     var bairro = req.body.bairro
     var rua = req.body.rua
     var numero = req.body.numero
+    var check = req.body.check
 
     if(erros.length >= 1){
     
@@ -91,7 +96,7 @@ var erros = []
         return true;
     }
     var strCPF = req.body.cpf;
-    console.log(TestaCPF(strCPF));
+
 
     if(!req.body.cpf || typeof req.body.cpf == undefined || req.body.cpf == null) {erros.push({texto: "CPF inválido"})}
     else if(req.body.cpf.length < 11) {erros.push({texto: "CPF inválido"})}
@@ -148,51 +153,68 @@ var erros = []
 
      if(!req.body.check || typeof req.body.check == undefined || req.body.check == null || req.body.check.length <= 0){erros.push({texto: "Selecione ao menos um plano!"})}
 
-     
 
     if(erros.length > 0 ){
 
-        res.render(views + "contato", {erros: erros, nomeC, email, cpf, dataN, cep, estado, cidade, bairro, rua, numero})
+      sucesso = 1
+        res.render(views + "contato", {sucesso, erros: erros, nomeC, email, cpfF, dataN, cep, estado, cidade, bairro, rua, numero})
         console.log(erros)
         
-        
-      
 
     }else{
-  
-      console.log(calculaIdade(req.body.dataNasc))
-      console.log(req.body.cpf)
-      console.log(req.body.check[0])
+
+      sucesso = 2
+      
 
       novoPedido = {
 
-        nomeCompleto: req.body.nomeCompleto,
-        email: req.body.email,
-        cpf: req.body.cpf,
-        dataNasc: req.body.dataNasc,
-        cep: req.body.cep,
-        estado: req.body.estado,
-        cidade: req.body.cidade,
-        bairro: req.body.bairro,
-        rua: req.body.rua,
-        numero: req.body.numero,
-        check: req.body.check
+        nomeCompleto: nomeC,
+        email: email,
+        cpf: cpfF,
+        dataNasc: dataN,
+        cep: cep,
+        estado: estado,
+        cidade: cidade,
+        bairro: bairro,
+        rua: rua,
+        numero: numero,
+        check: check
 
       }
 
       new Pedido(novoPedido).save().then(() => {
 
         console.log("Pedido cadastrado com sucesso!")
+        window.open('mailto:test@example.com')
+        res.render(views + "contato", {sucesso, erros: erros, nomeC, email, cpfF, dataN, cep, estado, cidade, bairro, rua, numero})
         
-        res.redirect("/contato")
-        
+        var remetente = nodemailer.createTransport({
+          host: '',
+          service: '',
+          port: 587,
+          secure: true,
+          auth:{
+          user: 'seuEmail@email.com',
+          pass: 'suaSenha' }
+          });
+
+          var emailASerEnviado = {
+            from: 'seuEmail@email.com',
+            to: 'seuDestino@email.com',
+            subject: 'Enviando Email com Node.js',
+            text: 'Estou te enviando este email com node.js',
+            };
 
       })
 
       .catch((erro) =>{
-
-        console.log("Erro ao cadastrar pedido:" + erro)
-        res.render(views + "contato")
+        sucesso = 1
+       console.log("Erro ao cadastrar pedido:" + erro)
+      
+        erros.push({texto: erro})
+        
+        
+        res.render(views + "contato", {sucesso, erros: erros, nomeC, email, cpfF, dataN, cep, estado, cidade, bairro, rua, numero})
 
       })
   

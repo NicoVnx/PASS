@@ -18,6 +18,9 @@
 
             <h2>Faça seu Pedido</h2>
 
+            <% if(sucesso == 2){ nomeC = '', email = '', cpfF = '', dataN = '', cep = '', estado = '', cidade = '', bairro = '', rua = '', numero = '' %> 
+            <p>Pedido cadastrado com Sucesso! Um email de confirmação foi enviado para você!</p> <% } %>  
+
             <% erros.forEach(erro => { %>
              <%= erro.texto %> 
             <% }) %>
@@ -40,7 +43,7 @@
                         <li><label for="email">Email</label>
                         <input placeholder="Digite seu email" name="email" type="email" value="<%=email%>" ></li>
                         <li><label for="cpf">CPF</label>
-                        <input onInput= "mask(this, 'cpf')" id="cpf" type="text" placeholder="Ex.: xxx.xxx.xxx-xx"  name="cpf" maxlength="14" value="<%=cpf%>"></li>
+                        <input onInput= "mask(this, 'cpf')" id="cpf" type="text" placeholder="Ex.: xxx.xxx.xxx-xx"  name="cpf" maxlength="14" value="<%=cpfF%>"></li>
                         <li><label for="data-nasc">Data de Nascimento</label>
                         <input onInput= "mask(this, 'data')" id="data-nasc" type="text" placeholder="Ex.: dd/mm/aaaa"  name="dataNasc" value="<%=dataN%>">  
 

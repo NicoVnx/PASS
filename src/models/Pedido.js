@@ -17,16 +17,21 @@ const PedidoSchema = mongoose.Schema({
         type: String,
         unique: false,
         lowercase: true,
+        
     },
     email:{
         type: String,
         require: true,
+        unique: true,
+        null: false,
         lowercase: true,
         
     },
     cpf:{
         type: String,
         require: true,
+        unique: true,
+        lowercase: true,
     },
     dataNasc:{
         type: String,
@@ -77,8 +82,8 @@ const pedidoOne = newPedido
 new pedidoOne({
 
     nomeCompleto: "ola mundo",
-    email: "eu@eu.com",
-    cpf: "48895546881",
+    email: "alui@eu.com",
+    cpf: "73120753041",
     dataNasc: "01/01/2002",
     cep: "13290000",
     estado: '1',
@@ -86,12 +91,24 @@ new pedidoOne({
     bairro: "1",
     rua: "1",
     numero: "1",
-    check: "a"
+    check: "aaa"
 
 }).save()
 .then(() => {
     console.log("Pedido cadastrado")
 }).catch((erro) => {
     console.log("Houve um erro " + erro)
-})*/
+})
+
+PedidoSchema.pre('save', function (next) {
+    var self = this;
+    newPedido.find({cpf : self.cpf}, function (err, docs) {
+        if (!docs.length){
+            next();
+        }else{                
+            console.log('cpf exists: ', self.cpf);
+            next(new Error("CPF exists!"));
+        }
+    });
+}) ;*/
 
