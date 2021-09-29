@@ -6,24 +6,30 @@
 
    <h2>Pedidos realizados pelos usuários</h2> 
         
+   
 <div class= 'pedidos'>
     <% pedidos.forEach(pedido => { %>
-        
+     <form action="/admin/editar/<%=pedido._id%> " method="post">
+
         <div class="pedido">
-     <p>Nome - <%= pedido.nomeCompleto %> </p>
-     <p>Email - <%= pedido.email %> </p>
-     <p>CPF - <%= pedido.cpf %> </p>
-     <p>Data Nascimento - <%= pedido.dataNasc %> </p>
 
-     <p>CEP - <%= pedido.cep %> </p>
-     <p>Estado - <%= pedido.estado %> </p>
-     <p>Cidade - <%= pedido.cidade %> </p>
-     <p>Bairro - <%= pedido.bairro %> </p>
-     <p>Rua - <%= pedido.rua %> </p>
-     <p>Número - <%= pedido.numero %> </p>
+            <p>Nome - <%= pedido.nomeCompleto %> </p>
+            <p>Email - <%= pedido.email %> </p>
+            <p>CPF - <%= pedido.cpf %> </p>
+            <p>Data Nascimento - <%= pedido.dataNasc %> </p>
+            <p>CEP - <%= pedido.cep %> </p>
+            <p>Estado - <%= pedido.estado %> </p>
+            <p>Cidade - <%= pedido.cidade %> </p>
+            <p>Bairro - <%= pedido.bairro %> </p>
+            <p>Rua - <%= pedido.rua %> </p>
+            <p>Número - <%= pedido.numero %> </p>
+            <p>Plano - <%= pedido.check %> </p>
 
-     <p>Plano - <%= pedido.check %> </p>
-    </div>
+        </div>
+
+    <button type="submit">Editar</button>
+    
+</form>
     <% }) %>
 </div>
 

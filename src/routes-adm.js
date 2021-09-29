@@ -25,4 +25,17 @@ admin.post("/home", (req, res) => {
     }
 })
 
+admin.post('/editar/:id', (req, res) => {
+    
+    Pedido.findOne({_id:req.params.id}).then((pedido)=>{
+    res.render(views + "admin/editar", {pedido: pedido})
+}).catch((err) => {
+    console.log('pedido não existe')
+    res.redirect('/admin/home')
+})
+
+})
+
+
+
 module.exports = admin;

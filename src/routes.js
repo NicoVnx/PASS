@@ -4,7 +4,7 @@ const views = __dirname + "/views/"
 const mongoose = require("mongoose")
 require('./models/Pedido')
 const Pedido = mongoose.model('pedidos')
-const nodemailer = require('nodemailer')
+sendMail = require('../public/script/sendMail')
 
 var erros = []
 var sucesso
@@ -185,25 +185,9 @@ var sucesso
       new Pedido(novoPedido).save().then(() => {
 
         console.log("Pedido cadastrado com sucesso!")
-        window.open('mailto:test@example.com')
         res.render(views + "contato", {sucesso, erros: erros, nomeC, email, cpfF, dataN, cep, estado, cidade, bairro, rua, numero})
         
-        var remetente = nodemailer.createTransport({
-          host: '',
-          service: '',
-          port: 587,
-          secure: true,
-          auth:{
-          user: 'seuEmail@email.com',
-          pass: 'suaSenha' }
-          });
-
-          var emailASerEnviado = {
-            from: 'seuEmail@email.com',
-            to: 'seuDestino@email.com',
-            subject: 'Enviando Email com Node.js',
-            text: 'Estou te enviando este email com node.js',
-            };
+        sendMail(email)
 
       })
 

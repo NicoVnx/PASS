@@ -71,6 +71,11 @@ const PedidoSchema = mongoose.Schema({
         lowercase: true,
         require: true,
     },
+
+    createdAt:{ 
+        type: Date,  
+        default: Date.now 
+    }
 })
 
 mongoose.model('pedidos', PedidoSchema)
