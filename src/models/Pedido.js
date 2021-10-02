@@ -16,7 +16,6 @@ const PedidoSchema = mongoose.Schema({
     nomeCompleto:{
         type: String,
         unique: false,
-        lowercase: true,
         
     },
     email:{
@@ -105,15 +104,5 @@ new pedidoOne({
     console.log("Houve um erro " + erro)
 })
 
-PedidoSchema.pre('save', function (next) {
-    var self = this;
-    newPedido.find({cpf : self.cpf}, function (err, docs) {
-        if (!docs.length){
-            next();
-        }else{                
-            console.log('cpf exists: ', self.cpf);
-            next(new Error("CPF exists!"));
-        }
-    });
-}) ;*/
+ ;*/
 

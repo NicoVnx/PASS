@@ -1,10 +1,18 @@
 const express = require("express")
 const routes = express.Router()
 const views = __dirname + "/views/"
+
 const mongoose = require("mongoose")
+
 require('./models/Pedido')
 const Pedido = mongoose.model('pedidos')
+
+require('./models/Suporte')
+const Suporte = mongoose.model('suportes')
+
 sendMail = require('../public/script/sendMail')
+sendMailSup = require('../public/script/sendMailSup')
+
 
 var erros = []
 var sucesso
@@ -187,11 +195,16 @@ var sucesso
         console.log("Pedido cadastrado com sucesso!")
         res.render(views + "contato", {sucesso, erros: erros, nomeC, email, cpfF, dataN, cep, estado, cidade, bairro, rua, numero})
         
-        sendMail(email)
-
+        Pedido.findOne({cpf:req.body.cpf}).then((pedido)=>{
+          const id = pedido._id
+          sendMail(email, id, nomeC)
+      }).catch((err) => {
+      console.log(err)
       })
 
-      .catch((erro) =>{
+        
+
+      }).catch((erro) =>{
         sucesso = 1
        console.log("Erro ao cadastrar pedido:" + erro)
       
@@ -208,5 +221,55 @@ var sucesso
 
 
   routes.get("/sobre", (req, res) => res.render(views + "sobre", {}))
+
+  routes.get("/suporte", (req, res) => res.render(views + "suporte", {}))
+
+  routes.post("/suporte", (req, res) => {
+    
+    if(erros.length >= 1){
+    
+      for(var i = 0; i = erros.length; i++){
+        erros.shift()
+      }
+    }
+
+    var emailS = req.body.email
+    var sup = req.body.sup
+
+    var validateEmail = function(email) {
+      var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      return re.test(email)}
+
+    if(!req.body.email || typeof req.body.email == undefined || req.body.email == null) {erros.push({texto: "Email inválido"})}
+    if(req.body.email == validateEmail ) {erros.push({texto: "Insira um email valido!"})}
+
+    if(!req.body.sup || typeof req.body.sup == undefined || req.body.sup == null) {erros.push({texto: "Área de suporte vazia!"})}
+
+    if(erros.length > 0 ){
+
+        res.render(views + "suporte", {erros: erros, emailS, sup})
+        console.log(erros)
+        
+
+    }else{
+
+      novoSuporte = {
+
+        suporteTxt: sup,
+        email: emailS
+
+      }
+
+      new Suporte(novoSuporte).save().then(() => {
+
+        console.log("Suporte cadastrado com sucesso!")
+        res.render(views + "suporte", {})
+        sendMailSup(emailS, sup)
+
+      })
+
+    }
+  
+  })
 
 module.exports = routes;

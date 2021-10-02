@@ -9,10 +9,11 @@
    
 <div class= 'pedidos'>
     <% pedidos.forEach(pedido => { %>
-     <form action="/admin/editar/<%=pedido._id%> " method="post">
+     <form action="/admin/editar/<%=pedido._id%> " method="get">
 
         <div class="pedido">
 
+            <p>ID - <%= pedido._id %> </p> 
             <p>Nome - <%= pedido.nomeCompleto %> </p>
             <p>Email - <%= pedido.email %> </p>
             <p>CPF - <%= pedido.cpf %> </p>
@@ -24,6 +25,8 @@
             <p>Rua - <%= pedido.rua %> </p>
             <p>Número - <%= pedido.numero %> </p>
             <p>Plano - <%= pedido.check %> </p>
+
+            
 
         </div>
 
