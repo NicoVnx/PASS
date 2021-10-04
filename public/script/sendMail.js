@@ -1,5 +1,3 @@
-const { text } = require('express')
-
 sendMail = function(email, id, nomeC){
 
 const nodemailer = require('nodemailer')
@@ -20,7 +18,7 @@ var remetente = nodemailer.createTransport({
       from: 'nicolas.viana7spam@gmail.com',
       to: email,
       subject: 'Cadastro foi feito com sucesso!',
-      html: 'A PASS! Viagens agradeça a preferência! Para editar seu pedido clique aqui -> http://127.0.0.1:3000/admin/editar/' + pedidoId 
+      html: 'A PASS! Viagens agradeça a preferência! Para editar ou visualizar seu pedido clique aqui -> http://127.0.0.1:3000/admin/editar/' + pedidoId 
       
       }
 

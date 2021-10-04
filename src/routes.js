@@ -222,10 +222,16 @@ var sucesso
 
   routes.get("/sobre", (req, res) => res.render(views + "sobre", {}))
 
-  routes.get("/suporte", (req, res) => res.render(views + "suporte", {}))
+  routes.get("/suporte", (req, res) => {
+    var emailS = req.body.email
+    var sup = req.body.sup
+    sucesso = 0
+    res.render(views + "suporte", {erros: erros, emailS, sup, sucesso})
+    
+  })
 
   routes.post("/suporte", (req, res) => {
-    
+    sucesso = 0
     if(erros.length >= 1){
     
       for(var i = 0; i = erros.length; i++){
@@ -236,23 +242,23 @@ var sucesso
     var emailS = req.body.email
     var sup = req.body.sup
 
-    var validateEmail = function(email) {
+    var validateEmailS = function(emailS) {
       var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-      return re.test(email)}
+      return re.test(emailS)}
 
     if(!req.body.email || typeof req.body.email == undefined || req.body.email == null) {erros.push({texto: "Email inválido"})}
-    if(req.body.email == validateEmail ) {erros.push({texto: "Insira um email valido!"})}
+    if(req.body.email == validateEmailS ) {erros.push({texto: "Insira um email valido!"})}
 
     if(!req.body.sup || typeof req.body.sup == undefined || req.body.sup == null) {erros.push({texto: "Área de suporte vazia!"})}
 
     if(erros.length > 0 ){
-
-        res.render(views + "suporte", {erros: erros, emailS, sup})
+      sucesso = 1
+        res.render(views + "suporte", {erros: erros, emailS, sup, sucesso})
         console.log(erros)
         
 
     }else{
-
+      sucesso = 2
       novoSuporte = {
 
         suporteTxt: sup,
@@ -263,7 +269,7 @@ var sucesso
       new Suporte(novoSuporte).save().then(() => {
 
         console.log("Suporte cadastrado com sucesso!")
-        res.render(views + "suporte", {})
+        res.render(views + "suporte", {erros: erros, emailS, sup, sucesso})
         sendMailSup(emailS, sup)
 
       })
@@ -271,5 +277,6 @@ var sucesso
     }
   
   })
+
 
 module.exports = routes;

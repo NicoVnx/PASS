@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
 <%- include('../parts/page-head', { title : 'Login ADM', linkCSS : '../css/login-adm.css', linkCSS2 : '../css/page-head.css', linkCSS3 : '../css/normalize.css'}) %>
 
 <body>
@@ -7,6 +10,11 @@
     <div class="container-login">
 
         <div id="local-login">
+
+            <% if(userS){%>Você ja estado logado como <%= userS %> 
+                <p><a href="/admin/home">Home Adm</a></p>
+                <p><a href="/admin/logout">Logout</a></p>
+                <%}else{%>  
 
             <div id="box-login">
                 
@@ -40,7 +48,7 @@
                 <button id="sub-login" form="login-form" type="submit">Confirmar</button>
 
             </div>
-
+<%} %>
         </div>
     </div>
     

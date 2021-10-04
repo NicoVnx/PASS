@@ -1,20 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
 <%- include('parts/page-head', { title : 'Suporte', linkCSS : 'css/sobre.css', linkCSS2 : '', linkCSS3 : ''}) %>
+
 <body>
 
     <%- include('parts/page-header', { }) %>
 
     <p>Aqui você pode relatar um problema, ou alguma mudança que queira fazer no seu pedido</p>
 
+ <% erros.forEach(erro => { %>
+            <%= erro.texto %> 
+           <% }) %>
+
+
+    <% if(sucesso == 2){ 
+        emailS = ''
+        sup = ''%>
+    
+<p>Suporte enviado com sucesso!</p>
+    <%} %> 
+
     <form action="" method="post">
 
        
-
         <label for="email">Seu Email:</label>
-        <input type="text" name="email" id="email" >
-        <textarea placeholder="Digite aqui..." name="sup" maxlength="120" ></textarea>
+        <input type="email" name="email" id="email" value="<%=emailS%>">
+        <textarea  placeholder="Digite aqui..." name="sup" maxlength="120"><%=sup%></textarea>
 
         <button type="submit">submit</button>
 
     </form>
 </body>
+
 </html>
+
+
+
+

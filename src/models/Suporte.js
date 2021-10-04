@@ -27,15 +27,19 @@ const SuporteSchema = mongoose.Schema({
         unique: false,
         lowercase: true,
     },
+    createdAt:{ 
+        type: Date,  
+        default: Date.now 
+    },
 })
 
 mongoose.model('suportes', SuporteSchema)
 
-const newSuporte = mongoose.model('suportes', SuporteSchema)
+/*const newSuporte = mongoose.model('suportes', SuporteSchema)
 
 const suporteOne = newSuporte
 
-/*new suporteOne({
+new suporteOne({
 
     suporteTxt: "erro cadastro",
     email: "nico@gmail.com"

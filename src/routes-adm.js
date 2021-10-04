@@ -1,30 +1,81 @@
 const express = require("express")
 const admin = express.Router()
 const views = __dirname + "/views/"
+
 const mongoose = require("mongoose")
+
 require('./models/Pedido')
 const Pedido = mongoose.model('pedidos')
+
+require('./models/Suporte')
+const Suporte = mongoose.model('suportes')
 require('./routes')
+
+var user = "rogerio"
+var password = '123321'
+
 
 var erros = []
 
-const adm = "rogerio"
-const password = '123321'
-
-admin.get("/", (req, res) => res.render(views + "admin/login", {}))
+admin.get("/", (req, res) => {
+    var userS = req.session.user
+    res.render(views + "admin/login", {userS})
+})
 admin.post("/home", (req, res) => {
 
-    if(req.body.user == adm && req.body.password == password){
-        Pedido.find().then(function (pedidos){
-            res.render(views + "admin/home", {pedidos: pedidos})
-        }).catch((err) => {
-            console.log('houve um erro' + err)
-        })
+    var userS = req.session.user
+
+    if(req.body.user == user && req.body.password == password){
+        req.session.user = user
+        res.render(views + "admin/home", {userS})
+        
     }else{
 
         res.redirect('/admin/')
 
     }
+})
+
+admin.get('/home', (req, res) => {
+    
+    if(req.session.user){
+
+        var userS = req.session.user
+        res.render(views + "admin/home", {userS})
+
+    }else{
+
+        res.send('Faça o login como administrador para continuar!')
+
+    }
+
+})
+
+admin.get('/logout', (req,res) => {
+
+    req.session.destroy(function (err) {
+    res.redirect('/admin/')})
+  
+  })
+
+admin.get("/suportes", (req, res) => {
+
+    Suporte.find().then(function (suportes){
+        res.render(views + "admin/suportes", {suportes: suportes})
+    }).catch((err) => {
+        console.log('houve um erro' + err)
+    })
+
+})
+
+admin.get("/pedidos", (req, res) => {
+
+    Pedido.find().then(function (pedidos){
+        res.render(views + "admin/pedidos", {pedidos: pedidos})
+    }).catch((err) => {
+        console.log('houve um erro' + err)
+    })
+
 })
 
 admin.get('/editar/:id', (req, res) => {

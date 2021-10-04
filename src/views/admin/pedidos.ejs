@@ -1,0 +1,39 @@
+<%- include('../parts/page-head', { title : 'Login ADM', linkCSS : '../css/home-adm.css', linkCSS2 : '../css/page-head.css', linkCSS3 : '../css/normalize.css'}) %>
+<body>
+    <%- include('../parts/page-headerAdm') %>
+
+<h2>Pedidos realizados pelos usuários</h2>
+
+<div class= 'pedidos'>
+    <% pedidos.forEach(pedido => { %>
+     <form action="/admin/editar/<%=pedido._id%> " method="get">
+
+        <div class="pedido">
+
+            <p>ID - <%= pedido._id %> </p> 
+            <p>Nome - <%= pedido.nomeCompleto %> </p>
+            <p>Email - <%= pedido.email %> </p>
+            <p>CPF - <%= pedido.cpf %> </p>
+            <p>Data Nascimento - <%= pedido.dataNasc %> </p>
+            <p>CEP - <%= pedido.cep %> </p>
+            <p>Estado - <%= pedido.estado %> </p>
+            <p>Cidade - <%= pedido.cidade %> </p>
+            <p>Bairro - <%= pedido.bairro %> </p>
+            <p>Rua - <%= pedido.rua %> </p>
+            <p>Número - <%= pedido.numero %> </p>
+            <p>Plano - <%= pedido.check %> </p>
+            <p>Criado em - <%= pedido.createdAt %> </p>
+
+            
+
+        </div>
+
+    <button type="submit">Editar</button>
+    
+</form>
+    <% }) %>
+</div>
+
+</body>
+
+</html>

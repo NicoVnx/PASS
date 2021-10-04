@@ -5,6 +5,14 @@ const routes = require("./src/routes")
 
 const mongoose = require("mongoose")
 
+const session = require("express-session")
+
+server.use(session({
+secret: "ndfgjnw9824",
+resave: true,
+saveUninitialized: true
+}))
+
 mongoose.Promise = global.Promise
 mongoose.connect("mongodb://localhost/passViagem", {
 useNewUrlParser: true,
