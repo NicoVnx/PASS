@@ -9,28 +9,22 @@
 
     <p>Aqui você pode relatar um problema, ou alguma mudança que queira fazer no seu pedido</p>
 
- <% erros.forEach(erro => { %>
-            <%= erro.texto %> 
-           <% }) %>
+    <% erros.forEach(erro => { %> <%= erro.texto %> <% })%>
 
-
-    <% if(sucesso == 2){ 
-        emailS = ''
-        sup = ''%>
-    
-<p>Suporte enviado com sucesso!</p>
-    <%} %> 
+    <% if(sucesso == 2){ emailS = '', sup = '' %> <p>Suporte enviado com sucesso!</p> <% }%> 
 
     <form action="" method="post">
 
-       
-        <label for="email">Seu Email:</label>
+
+        <label for="email">Seu Email: </label>
         <input type="email" name="email" id="email" value="<%=emailS%>">
+        
         <textarea  placeholder="Digite aqui..." name="sup" maxlength="120"><%=sup%></textarea>
 
         <button type="submit">submit</button>
 
     </form>
+
 </body>
 
 </html>

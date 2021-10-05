@@ -1,5 +1,6 @@
 const express = require("express")
 const server = express()
+
 const admin = require("./src/routes-adm")
 const routes = require("./src/routes")
 
@@ -12,6 +13,7 @@ secret: "ndfgjnw9824",
 resave: true,
 saveUninitialized: true
 }))
+
 
 mongoose.Promise = global.Promise
 mongoose.connect("mongodb://localhost/passViagem", {

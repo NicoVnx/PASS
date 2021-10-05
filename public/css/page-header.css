@@ -1,0 +1,45 @@
+header{
+
+    max-width: 100%;
+    height: 62px;
+    display: flex;
+    margin-top: 20px;
+
+}
+
+header .container{
+
+    width: 42%;
+    margin: auto;
+
+}
+nav#header{
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+
+ul#ulpai{
+
+   height: 100%;
+   width: 40%;
+    padding: 0;
+   text-align: center;
+   align-items: center;
+   
+}
+
+li.ponta.i{
+
+    margin-right: 23%;
+
+}
+
+li.ponta.ii{
+
+    margin-left: 23%;
+
+}

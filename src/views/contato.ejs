@@ -4,16 +4,9 @@
 <%- include('parts/page-head', { title : 'Contato', linkCSS : 'css/contato.css', linkCSS2 : '', linkCSS3 : ''}) %>
 <script src="/script/mask.js"></script>
 
-
-
 <body>
     
-    <!--Header-->
-
-    <!--no title vai uma variável string que sera mostrada diferente para cada pagina-->
-    <%- include('parts/page-header', { }) %>
-
-    <!--Header-->
+    <%- include('parts/page-header') %>
 
     <div class="container-contato">
 
@@ -21,11 +14,15 @@
 
             <h2>Faça seu Pedido</h2>
 
-            <% if(sucesso == 2){ nomeC = '', email = '', cpfF = '', dataN = '', cep = '', estado = '', cidade = '', bairro = '', rua = '', numero = '' %> 
+            <% if(sucesso == 2){ nomeC = '', email = '', cpfF = '', dataN = '', cep = '', estado = '', cidade = '', 
+            bairro = '', rua = '', numero = '' %>
+
             <p>Pedido cadastrado com Sucesso! Um email foi enviado para você! Não esqueça de olhar o Spam :)</p> <% } %>  
 
             <% erros.forEach(erro => { %>
-             <%= erro.texto %> 
+
+                <%= erro.texto %>
+
             <% }) %>
 
 
@@ -35,18 +32,17 @@
 
                     <ul class="separator pessoais">
 
-
-                        <% if(nomeC === ' '){
-                            nomeC = 'undefined'
-                        } %>
-
+                        <% if(nomeC === ' '){ nomeC = 'undefined' }%>
 
                         <li><label for="nome-completo">Nome Completo</label>
                         <input placeholder="Ex.: João da Silva" name="nomeCompleto" type="text" maxlength="30" value="<%=nomeC%>" ></li>
+                        
                         <li><label for="email">Email</label>
                         <input placeholder="Ex.: joaosilva@gmail.com" name="email" type="email" value="<%=email%>" ><a>* Digite um email valido</a></li>
+                        
                         <li><label for="cpf">CPF</label>
                         <input onInput= "mask(this, 'cpf')" id="cpf" type="text" placeholder="Ex.: 12312312312"  name="cpf" maxlength="11" value="<%=cpfF%>"></li>
+                        
                         <li><label for="data-nasc">Data de Nascimento</label>
                         <input onInput= "mask(this, 'data')" id="data-nasc" type="text" placeholder="Ex.: 01/10/1999"  name="dataNasc" value="<%=dataN%>">  
 
@@ -56,42 +52,49 @@
 
                         <li><label for="cep">CEP</label>
                         <input onInput="mask(this, 'cep')" id="cep" type="text" placeholder="Ex.: 13272200"  name="cep" maxlength="8" value="<%=cep%>"></li>
+                        
                         <li><label for="estado">Estado</label>
-                            <select id="estado" name="estado">
-                                <option value="AC">Acre</option>
-                                <option value="AL">Alagoas</option>
-                                <option value="AP">Amapá</option>
-                                <option value="AM">Amazonas</option>
-                                <option value="BA">Bahia</option>
-                                <option value="CE">Ceará</option>
-                                <option value="DF">Distrito Federal</option>
-                                <option value="ES">Espírito Santo</option>
-                                <option value="GO">Goiás</option>
-                                <option value="MA">Maranhão</option>
-                                <option value="MT">Mato Grosso</option>
-                                <option value="MS">Mato Grosso do Sul</option>
-                                <option value="MG">Minas Gerais</option>
-                                <option value="PA">Pará</option>
-                                <option value="PB">Paraíba</option>
-                                <option value="PR">Paraná</option>
-                                <option value="PE">Pernambuco</option>
-                                <option value="PI">Piauí</option>
-                                <option value="RJ">Rio de Janeiro</option>
-                                <option value="RN">Rio Grande do Norte</option>
-                                <option value="RS">Rio Grande do Sul</option>
-                                <option value="RO">Rondônia</option>
-                                <option value="RR">Roraima</option>
-                                <option value="SC">Santa Catarina</option>
-                                <option value="SP">São Paulo</option>
-                                <option value="SE">Sergipe</option>
-                                <option value="TO">Tocantins</option>
-                            </select>
+                        <select id="estado" name="estado">
+
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+
+                        </select>
+                        
                         <li><label for="cidade">Cidade</label>
                         <input placeholder="Ex.: Jundiaí" name="cidade" type="text" value="<%=cidade%>"></li>
+                        
                         <li><label for="bairro">Bairro</label>
                         <input placeholder="Ex.: Santo Antônio" name="bairro" type="text" value="<%=bairro%>"></li>
+                        
                         <li><label for="rua">Rua</label>
                         <input placeholder="Ex.: Rua das rosas" name="rua" type="text" value="<%=rua%>" ></li>
+                        
                         <li><label for="numero">Número</label>
                         <input placeholder="Ex.: 128" name="numero" type="text" value="<%=numero%>"></li>                 
 
@@ -107,7 +110,6 @@
 
                         <div class="plano i">
 
-                            
                             <input type="radio" class="check" name="check" id="planoi"  value="plano1" > 
                             <label for="planoi"></i>Plano 1</label>
 
@@ -115,14 +117,12 @@
 
                         <div class="plano ii">
 
-                            
                             <input type="radio" class="check" name="check" id="planoii" value="plano2">
                             <label for="planoii">Plano 2</label>
 
                         </div>
 
                         <div class="plano iii">
-
                             
                             <input type="radio" class="check" name="check" id="planoiii" value="plano3">
                             <label for="planoiii"></i>Plano 3</label>
@@ -134,9 +134,7 @@
                 </div>
 
 
-                <button type="submit" class="submit">
-                    <i class="fas fa-arrow-right"></i>
-                </button>
+                <button type="submit" class="submit"> <i class="fas fa-arrow-right"></i> </button>
 
             </form>
     

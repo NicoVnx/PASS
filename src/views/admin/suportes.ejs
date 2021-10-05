@@ -1,24 +1,30 @@
-<%- include('../parts/page-head', { title : 'Login ADM', linkCSS : '../css/home-adm.css', linkCSS2 : '../css/page-head.css', linkCSS3 : '../css/normalize.css'}) %>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<%- include('../parts/page-head', { title : 'Login ADM', linkCSS : '../css/suportes.css'}) %>
+
 <body>
+
     <%- include('../parts/page-headerAdm') %>
 
-<h2>Suporte dos usuários</h2>
+    <h2>Suporte dos usuários</h2>
 
-<div class= 'pedidos'>
-    <% suportes.forEach(suporte => { %>
-     
+    <div class= 'pedidos'>
 
-        <div class="suporte">
+        <% suportes.forEach(suporte => { %>
+        
+            <div class="suporte">
 
-            <p>ID - <%= suporte._id %> </p> 
-            <p>Email - <%= suporte.email %> </p>
-            <p>Conteúdo - <%= suporte.suporteTxt %> </p>
-            <p>Criado em - <%= suporte.createdAt %> </p>
+                <p>ID - <%= suporte._id %> </p> 
+                <p>Email - <%= suporte.email %> </p>
+                <p>Conteúdo - <%= suporte.suporteTxt %> </p>
+                <p>Criado em - <%= suporte.createdAt %> </p>
 
-        </div>
+            </div>
 
-    <% }) %>
-</div>
+        <% }) %>
+
+    </div>
 
 </body>
 
