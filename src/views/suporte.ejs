@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<%- include('parts/page-head', { title : 'Suporte', linkCSS : 'css/sobre.css', linkCSS2 : '', linkCSS3 : ''}) %>
+<%- include('parts/page-head', { title : 'Suporte', linkCSS : 'css/suporte.css', linkCSS2 : '', linkCSS3 : ''}) %>
 
 <body>
 
     <%- include('parts/page-header', { }) %>
+<div class="container suporte">
 
-    <p>Aqui você pode relatar um problema, ou alguma mudança que queira fazer no seu pedido</p>
+    <div class="content-suporte">
 
-    <% erros.forEach(erro => { %> <%= erro.texto %> <% })%>
+        <h2 class="title">Suporte ao usuário</h2>
 
-    <% if(sucesso == 2){ emailS = '', sup = '' %> <p>Suporte enviado com sucesso!</p> <% }%> 
+        <p>Aqui você pode relatar um problema, ou alguma mudança que queira fazer no seu pedido</p>
 
-    <form action="" method="post">
+    <div id="erros"><% erros.forEach(erro => { %> <a>* <%= erro.texto %></a> <% })%></div>
+
+    <% if(sucesso == 2){ emailS = '', sup = '' %> <p id="sucesso">Suporte enviado com sucesso!</p> <% }%> 
+
+    <form id="sup" action="" method="post">
 
 
-        <label for="email">Seu Email: </label>
-        <input type="email" name="email" id="email" value="<%=emailS%>">
+        <div><label for="email">Seu Email: </label>
+        <input type="email" name="email" id="email" value="<%=emailS%>"></div>
         
-        <textarea  placeholder="Digite aqui..." name="sup" maxlength="120"><%=sup%></textarea>
+        <textarea  placeholder="Digite aqui..." name="sup" maxlength="1428"><%=sup%></textarea>
 
-        <button type="submit">submit</button>
+        <button type="submit" class="submit"> <i class="far fa-check-circle"></i> </button>
 
     </form>
+    </div>
+
+</div>
+    
 
 </body>
 

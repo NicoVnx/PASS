@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<%- include('../parts/page-head', { title : 'Login ADM', linkCSS : '../css/suportes.css'}) %>
-
+<%- include('../parts/page-head', { title : 'Login ADM', linkCSS : '../css/suportes-user.css'}) %>
+<%- include('../parts/page-headerAdm') %>
 <body>
 
-    <%- include('../parts/page-headerAdm') %>
+    <div class="container suportes">
+        
+<div class="content-sup">
+    <h1>Suporte dos usuários</h1>
 
-    <h2>Suporte dos usuários</h2>
-
-    <div class= 'pedidos'>
+    <div class= "suportes">
 
         <% suportes.forEach(suporte => { %>
         
@@ -25,6 +26,13 @@
         <% }) %>
 
     </div>
+
+</div>
+    
+
+</div>
+
+    
 
 </body>
 

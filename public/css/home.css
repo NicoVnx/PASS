@@ -1,5 +1,20 @@
-body{
+.content-home{
 
-    background-color: aqua;
+    margin: 80px 0 0 0;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 
 }
+
+
+
+.content-home h1{
+
+    margin: 20px;
+    font-size: 90px;
+    color:rgb(240, 130, 0) ;
+}
+

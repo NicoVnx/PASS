@@ -7,48 +7,38 @@
 
     <%- include('../parts/page-header') %>
 
-    <div class="container-login">
+    <div class="container login">
 
         <div id="local-login">
 
-            <% if(userS){%>Você ja estado logado como <%= userS %> 
-
-                <p><a href="/admin/home">Home Adm</a></p>
-                <p><a href="/admin/logout">Logout</a></p>
+            <% if(userS){%>
+                 
+<div class="logado">
+    <p class="logado-user"> Você já estado logado como <%= userS %></p>
+                <div class="logado-nav"><p><a href="/admin/home">Home Adm</a></p>
+                <p><a href="/admin/logout">Logout</a></p></div></div>
 
             <%}else{%>  
 
                 <div id="box-login">
                     
-                    <div id="title-login"><a >Login ADM </a><i class="fas fa-user"></i></div>
+                    <div class="title login"><a >Login ADM </a><i class="fas fa-user"></i></div>
 
                     <form id="login-form" action="/admin/home" method="POST">
-
-                        <ul id="login">
                         
-                            <div id="flex-login">
+                                <div class="flex-login">
 
-                                <div id="user-flex-login">
+                                    <li><label for="user">User</label>
+                                        <input id="user" name="user" type="text" alt="User" placeholder="Digite o user"></li>
 
-                                    <li><label for="user">User</label></li>
-                                    <li><label for="senha">Senha</label></li>
-
-                                </div>
-
-                                <div id="input-flex-login">
-                                
-                                    <li><input id="user" name="user" type="text" alt="User" placeholder="Digite o user"></li>
-                                    <li><input id="password" name="password" type="password" alt="Senha" placeholder="Digite o password"></li>
+                                        <li><label for="senha">Senha</label>
+                                            <input id="password" name="password" type="password" alt="Senha" placeholder="Digite o password"></li>
 
                                 </div>
-
-                            </div>
-                            
-                        </ul>  
 
                     </form>
 
-                    <button id="sub-login" form="login-form" type="submit">Confirmar</button>
+                    <button type="submit" form="login-form" class="submit"> <i class="far fa-check-circle"></i> </button>
 
                 </div>
                 

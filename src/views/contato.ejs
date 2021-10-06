@@ -8,26 +8,25 @@
     
     <%- include('parts/page-header') %>
 
-    <div class="container-contato">
+    <div class="container contato">
 
         <div class="content-contato">
 
-            <h2>Faça seu Pedido</h2>
+            <h2 class="title ctt">Faça seu Pedido</h2>
 
             <% if(sucesso == 2){ nomeC = '', email = '', cpfF = '', dataN = '', cep = '', estado = '', cidade = '', 
             bairro = '', rua = '', numero = '' %>
 
-            <p>Pedido cadastrado com Sucesso! Um email foi enviado para você! Não esqueça de olhar o Spam :)</p> <% } %>  
+            <p id="sucesso">Pedido cadastrado com Sucesso! Um email foi enviado para você! Não esqueça de olhar o Spam :)</p> <% } %>  
 
-            <% erros.forEach(erro => { %>
+            
 
-                <%= erro.texto %>
-
-            <% }) %>
-
-
+            
+            
             <form id="contato" action="/contato" method="POST" >
+                <div id="erros"><% erros.forEach(erro => { %><a>* <%= erro.texto %></a><% }) %></div>
 
+<h2 class="sub">-- Informações pessoais --</h2>
                 <div class="cont i">
 
                     <ul class="separator pessoais">
@@ -38,7 +37,7 @@
                         <input placeholder="Ex.: João da Silva" name="nomeCompleto" type="text" maxlength="30" value="<%=nomeC%>" ></li>
                         
                         <li><label for="email">Email</label>
-                        <input placeholder="Ex.: joaosilva@gmail.com" name="email" type="email" value="<%=email%>" ><a>* Digite um email valido</a></li>
+                        <div><input placeholder="Ex.: joaosilva@gmail.com" name="email" type="email" value="<%=email%>" ><a id="emailValido">* Digite um email válido</a></div></li>
                         
                         <li><label for="cpf">CPF</label>
                         <input onInput= "mask(this, 'cpf')" id="cpf" type="text" placeholder="Ex.: 12312312312"  name="cpf" maxlength="11" value="<%=cpfF%>"></li>
@@ -47,7 +46,7 @@
                         <input onInput= "mask(this, 'data')" id="data-nasc" type="text" placeholder="Ex.: 01/10/1999"  name="dataNasc" value="<%=dataN%>">  
 
                     </ul>
-
+                    
                     <ul class="separator endereco">
 
                         <li><label for="cep">CEP</label>
@@ -102,30 +101,39 @@
 
                 </div>
 
+                <div class="hr"></div>
+<h2 class="sub">-- Escolha aqui seu plano de viagem --</h2>
                 <div class="cont ii">
 
-                    <h2>Escolha aqui seu plano de viagem</h2>
+                    
 
                     <div class="planos">
 
                         <div class="plano i">
-
-                            <input type="radio" class="check" name="check" id="planoi"  value="plano1" > 
-                            <label for="planoi"></i>Plano 1</label>
+                            <div><label for="planoi"></i>Plano 1</label>
+                            <input type="radio" class="check" name="check" id="planoi"  value="plano1" ></div> 
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci maiores amet odio, 
+                            consequatur earum perferendis voluptatum ratione laborum. Reiciendis doloribus 
+                            quam debitis ipsam unde eos obcaecati, cumque ea illo sunt.</p>
 
                         </div>
 
                         <div class="plano ii">
-
-                            <input type="radio" class="check" name="check" id="planoii" value="plano2">
-                            <label for="planoii">Plano 2</label>
+                            <div><label for="planoii">Plano 2</label>
+                            <input type="radio" class="check" name="check" id="planoii" value="plano2"></div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci maiores amet odio, 
+                            consequatur earum perferendis voluptatum ratione laborum. Reiciendis doloribus 
+                            quam debitis ipsam unde eos obcaecati, cumque ea illo sunt.</p>
 
                         </div>
 
                         <div class="plano iii">
+                            <div><label for="planoiii"></i>Plano 3</label>
+                            <input type="radio" class="check" name="check" id="planoiii" value="plano3"></div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci maiores amet odio, 
+                            consequatur earum perferendis voluptatum ratione laborum. Reiciendis doloribus 
+                            quam debitis ipsam unde eos obcaecati, cumque ea illo sunt.</p>
                             
-                            <input type="radio" class="check" name="check" id="planoiii" value="plano3">
-                            <label for="planoiii"></i>Plano 3</label>
 
                         </div>
 
@@ -134,14 +142,17 @@
                 </div>
 
 
-                <button type="submit" class="submit"> <i class="fas fa-arrow-right"></i> </button>
+                <button type="submit" class="submit"> <i class="far fa-check-circle"></i> </button>
 
             </form>
     
         </div>
 
-    </div>
+        
 
+    </div>
+<div class="color">a
+            </div>
 </body>
 
 </html>

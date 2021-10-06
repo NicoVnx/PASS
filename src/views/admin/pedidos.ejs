@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<%- include('../parts/page-head', { title : 'Login ADM', linkCSS : '../css/pedido.css'%>
+<%- include('../parts/page-head', { title : 'Login ADM', linkCSS : '../css/pedidos-user.css'})%>
 
 <body>
-
+    
     <%- include('../parts/page-headerAdm') %>
+<div class="container pedidos">
 
-    <h2>Pedidos realizados pelos usuários</h2>
+    <div class="content-pedidos">
+
+        <h1>Pedidos realizados pelos usuários</h1>
 
     <div class= 'pedidos'>
 
@@ -30,16 +33,21 @@
                     <p>Número - <%= pedido.numero %> </p>
                     <p>Plano - <%= pedido.check %> </p>
                     <p>Criado em - <%= pedido.createdAt %> </p>
-
+<button type="submit">Editar</button>
                 </div>
 
-            <button type="submit">Editar</button>
+            
 
             </form>
 
         <% }) %>
 
     </div>
+
+    </div>
+
+</div>
+    
 
 </body>
 

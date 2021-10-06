@@ -1,0 +1,233 @@
+.content-contato{
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: rgb(255, 253, 242);
+    max-width: 80%;
+ align-items: center;
+margin: auto;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 1;
+
+}
+
+.color{
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    position:unset;
+    margin-top: -1200px;
+    background-color: #ff515a;
+
+}
+
+#contato{
+
+    display: flex;
+    flex-direction: column;
+   width: 69%;
+   align-items: center;
+   padding: 100px;
+   border-radius: 3px;
+   border: 1px solid rgb(70, 70, 70);
+
+}
+
+
+
+.cont.ii{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.cont.ii h2{
+
+    margin-bottom: 50px;
+
+}
+
+.cont.i{
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+
+    
+}
+
+.planos{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+}
+
+.plano{
+
+    height: 300px;
+    width: 200px;
+    display: flex;
+    text-align: center;
+    justify-content:center ;
+    flex-direction: column;
+
+}
+
+.separator{
+
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.separator.endereco li{
+
+    margin-bottom: 20px;
+
+}
+
+.separator.pessoais li{
+
+    margin-bottom: 40px;
+
+}
+
+
+.submit{
+
+    margin-top: 50px;
+
+}
+
+#contato li {
+
+    flex-direction: column;
+
+}
+
+
+#erros{
+
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 30px;
+
+}
+
+#erros a{
+
+    padding: 5px;
+    font-size: 14px;
+    font-style: italic;
+    color: rgba(255, 0, 0, 0.74);
+    margin-right: 30px;
+
+}
+
+
+p#sucesso{
+
+    font-size: 15px;
+    font-style: italic;
+    color: rgba(0, 223, 67, 0.87);
+
+}
+/*---*/
+
+
+
+#contato input, #contato select{
+
+    border: 0;
+
+    border-radius: 3px;
+    transition: border-bottom 0.75s;
+    border-bottom: 2px solid black;
+    
+
+}
+
+#contato input, #contato label{
+
+    padding: 6px;
+
+}
+
+#contato .cont.i input{
+
+    width: 210px;
+    padding-bottom: 4px;
+
+}
+
+.submit i{
+
+    border-radius: 100%;
+    font-size: 35px;
+    transition: color 0.5s;
+
+}
+
+.submit{
+    border: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+
+}
+
+.submit i:hover{
+
+    transition: color 0.25s;
+    color: #ff515a;
+    cursor: pointer;
+    
+
+}
+
+#contato input:focus{
+
+    border-bottom: 2px solid #ff515a;
+    transition: border-bottom 0.25s;
+
+}
+
+#emailValido{
+
+    font-size: 13px;
+    font-style: italic;
+    color: rgba(255, 0, 0, 0.637);
+
+}
+
+#contato input::placeholder{
+
+    font-size: 13px;
+    font-style: italic;
+
+}
+
+.ctt{
+
+    color: #ff515a;
+
+}

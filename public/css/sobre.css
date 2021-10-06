@@ -1,0 +1,22 @@
+.container.sobre{
+
+    text-align: center;
+    margin: auto;
+    height: 100vh;
+
+}
+
+.content-sobre{
+
+    width: 60%;
+    margin: auto;
+
+}
+
+
+
+.content-sobre p{
+
+    font-size: 22px;
+
+}

@@ -24,6 +24,7 @@ nav#header{
 
 ul#ulpai{
 
+    
    height: 100%;
    width: 40%;
     padding: 0;
@@ -41,5 +42,24 @@ li.ponta.i{
 li.ponta.ii{
 
     margin-left: 23%;
+
+}
+
+header li a{
+
+    transition: color 0.25s;
+
+}
+
+header li a:hover,  header li i:hover{
+
+    color: rgb(240, 130, 0);
+    transition: color 0.25s;
+
+}
+
+header li a{
+
+    position: absolute;
 
 }

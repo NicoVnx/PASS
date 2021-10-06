@@ -1,0 +1,32 @@
+.content-sup {
+    margin: 80px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-sup h1{
+
+    font-size: 50px;
+    
+
+}
+
+.suportes {
+
+    margin: 50px 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.suporte{
+
+    margin-bottom: 20px;
+    border: 1px solid rgb(85, 85, 85);
+    padding: 10px;
+
+}
