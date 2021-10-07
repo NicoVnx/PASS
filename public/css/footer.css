@@ -1,0 +1,77 @@
+footer{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    background-color: rgb(34, 34, 34);
+    height: 130px;
+    max-height: 130px;
+    padding: 30px 0;
+
+    
+}
+
+.content-footer{
+    max-width: 600px;
+    margin: 0 auto;
+    width: 35%;
+height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer i,footer p {
+
+    color: white;
+
+}
+
+footer ul li a{
+
+    font-size: 15px;
+    color: white;
+
+}
+
+
+
+footer nav ul{
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.sociais{
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+
+}
+
+.sociais i{
+
+    margin-right: 0px;
+    font-size: 35px;
+
+}
+
+.company{
+
+    display: flex;
+justify-content: center;
+}
+
+.company p{
+
+    margin: 0;
+    font-size: 15px;
+    font-style: italic;
+
+}

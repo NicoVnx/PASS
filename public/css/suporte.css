@@ -21,7 +21,8 @@
     background-color: rgb(255, 253, 242);
     border: 1px solid rgb(124, 124, 124);
     border-radius: 3px;
-    padding: 5% 6%;
+    padding: 3% 4%;
+    max-width: 1020px;
     width: 70%;
     margin: auto;
 

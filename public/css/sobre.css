@@ -21,7 +21,7 @@
 .content-sobre{
 
     width: 60%;
-    margin: auto;
+    margin: 80px auto;
 
 }
 
@@ -43,6 +43,8 @@
 
     padding: 40px;
     border: 1px solid rgb(124, 124, 124);
+    max-width: 780px;
+    margin: auto;
     border-radius: 3px;
     background-color: rgb(255, 253, 242);
 

@@ -1,6 +1,7 @@
 header#adm{
 
-    max-width: 100%;
+    width: 100%;
+    max-width: 1350px;
     height: 62px;
     display: flex;
     margin-top: 20px;

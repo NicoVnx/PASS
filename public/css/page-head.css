@@ -1,7 +1,13 @@
 *{
-
+font-family:'montserrat' ;
     background-color: transparent;
-    font-family: 'montserrat'; 
+     
+}
+
+footer a, footer i, footer p{
+
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 body{
