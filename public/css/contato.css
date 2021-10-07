@@ -3,36 +3,41 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    background-color: rgb(255, 253, 242);
-    max-width: 80%;
- align-items: center;
-margin: auto;
+    
+    max-width: 50%;
+    align-items: center;
+    margin: auto;
     margin-bottom: 80px;
-    position: relative;
-    z-index: 1;
+    
+    
 
 }
 
-.color{
-    z-index: 2;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    position:unset;
-    margin-top: -1200px;
+.container.contato{
+
+    
+}
+
+.color.contato{
+    
     background-color: #ff515a;
 
 }
 
+
+
 #contato{
 
+    position: relative;
+    z-index: 2;
+background-color: rgb(255, 253, 242);
     display: flex;
     flex-direction: column;
    width: 69%;
    align-items: center;
-   padding: 100px;
+   padding: 7% 12%;
    border-radius: 3px;
-   border: 1px solid rgb(70, 70, 70);
+   border: 1px solid rgb(124, 124, 124);
 
 }
 
@@ -128,7 +133,7 @@ margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: 30px;
+    margin: 20px 0;
 
 }
 
@@ -171,9 +176,9 @@ p#sucesso{
 
 }
 
-#contato .cont.i input{
+#contato .cont.i input, #contato .cont.i select{
 
-    width: 210px;
+    width: 100%;
     padding-bottom: 4px;
 
 }
@@ -228,6 +233,13 @@ p#sucesso{
 
 .ctt{
 
+    position: relative;
     color: #ff515a;
+
+}
+
+.sub.info{
+
+    margin-top: 0;
 
 }

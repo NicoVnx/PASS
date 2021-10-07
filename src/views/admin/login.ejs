@@ -6,23 +6,24 @@
 <body>
 
     <%- include('../parts/page-header') %>
-
+    
     <div class="container login">
 
         <div id="local-login">
 
             <% if(userS){%>
-                 
-<div class="logado">
+                <div class="title login"><a >Login ADM </a><i class="fas fa-user"></i></div>
+                <div class="logado">
     <p class="logado-user"> Você já estado logado como <%= userS %></p>
                 <div class="logado-nav"><p><a href="/admin/home">Home Adm</a></p>
                 <p><a href="/admin/logout">Logout</a></p></div></div>
 
-            <%}else{%>  
+            <%}else{%> 
 
+                <div class="title login"><a >Login ADM </a><i class="fas fa-user"></i></div>
                 <div id="box-login">
                     
-                    <div class="title login"><a >Login ADM </a><i class="fas fa-user"></i></div>
+                    
 
                     <form id="login-form" action="/admin/home" method="POST">
                         
@@ -47,7 +48,7 @@
         </div>
         
     </div>
-    
+   
 </body>
 
 </html>   

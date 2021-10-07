@@ -2,8 +2,20 @@
 
     text-align: center;
     margin: auto;
-    height: 100vh;
+    position: relative;
+    z-index: 2;
 
+}
+
+.color{
+
+    margin:0;
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    margin-top: -12%;
+    background-color: #ff7330;
 }
 
 .content-sobre{
@@ -20,3 +32,19 @@
     font-size: 22px;
 
 }
+
+.title.sup{
+
+    color: #ff7330
+
+}
+
+.sobreTxt{
+
+    padding: 40px;
+    border: 1px solid rgb(124, 124, 124);
+    border-radius: 3px;
+    background-color: rgb(255, 253, 242);
+
+}
+

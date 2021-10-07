@@ -24,9 +24,10 @@
             
             
             <form id="contato" action="/contato" method="POST" >
-                <div id="erros"><% erros.forEach(erro => { %><a>* <%= erro.texto %></a><% }) %></div>
+                
 
-<h2 class="sub">-- Informações pessoais --</h2>
+<h2 class="sub info">-- Informações pessoais --</h2>
+                <div id="erros"><% erros.forEach(erro => { %><a>* <%= erro.texto %></a><% }) %></div>
                 <div class="cont i">
 
                     <ul class="separator pessoais">
@@ -37,7 +38,7 @@
                         <input placeholder="Ex.: João da Silva" name="nomeCompleto" type="text" maxlength="30" value="<%=nomeC%>" ></li>
                         
                         <li><label for="email">Email</label>
-                        <div><input placeholder="Ex.: joaosilva@gmail.com" name="email" type="email" value="<%=email%>" ><a id="emailValido">* Digite um email válido</a></div></li>
+                        <input placeholder="Ex.: joaosilva@gmail.com" name="email" type="email" value="<%=email%>" ><a id="emailValido">* Digite um email válido</a></li>
                         
                         <li><label for="cpf">CPF</label>
                         <input onInput= "mask(this, 'cpf')" id="cpf" type="text" placeholder="Ex.: 12312312312"  name="cpf" maxlength="11" value="<%=cpfF%>"></li>
@@ -145,14 +146,15 @@
                 <button type="submit" class="submit"> <i class="far fa-check-circle"></i> </button>
 
             </form>
-    
+
+            
         </div>
 
-        
+       
 
     </div>
-<div class="color">a
-            </div>
+
+
 </body>
 
 </html>

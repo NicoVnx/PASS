@@ -160,6 +160,8 @@ routes.post("/contato", (req, res) => {
 routes.get("/sobre", (req, res) => res.render(views + "sobre"))
 
 routes.get("/suporte", (req, res) => {
+  
+  if(erros.length >= 1){for(var i = 0; i = erros.length; i++){erros.shift()}}
 
   var emailS = req.body.email
   var sup = req.body.sup

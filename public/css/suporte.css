@@ -1,3 +1,32 @@
+.container.suporte{
+
+    position: relative;
+    z-index: 2;
+}
+
+.color{
+
+    margin:0;
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    margin-top: -30%;
+    background-color: #f09941;
+
+}
+
+.box-sup{
+
+    background-color: rgb(255, 253, 242);
+    border: 1px solid rgb(124, 124, 124);
+    border-radius: 3px;
+    padding: 5% 6%;
+    width: 70%;
+    margin: auto;
+
+}
+
 .content-suporte{
 
     text-align: center;
@@ -20,6 +49,7 @@
 
     height: 100%;
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -29,7 +59,7 @@
 #sup input{
 
 transition: border-bottom 0.5s;
-    width: 300px;
+    width: 100%;
     border: 0;
     border-bottom: 2px solid black;
     border-radius: 3px;
@@ -52,14 +82,14 @@ transition: border-bottom 0.5s;
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    margin: 60px auto;
+    margin-top: 60px;
 
 }
 
 .submit i:hover{
 
-    transition: font-size 0.25s;
-    color: rgb(0, 238, 0);
+    transition: color 0.25s;
+    color: #f09941;
     cursor: pointer;
     transition: color 0.25s;
 }
@@ -86,7 +116,7 @@ transition: border-bottom 0.5s;
 
     transition: border-bottom 0.25s;
 
-    border-bottom: 2px solid rgb(0, 238, 0);
+    border-bottom: 2px solid #f09941;
 
 }
 
@@ -118,5 +148,11 @@ p#sucesso{
     font-size: 15px;
     font-style: italic;
     color: rgba(0, 223, 67, 0.87);
+
+}
+
+.title.supp{
+
+    color: #f09941;
 
 }

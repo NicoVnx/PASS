@@ -45,14 +45,21 @@ header#adm .container{
 
 }
 
-header#adm li a:hover {
+header#adm li a{
 
-    border-bottom: 2px solid black;
+    transition: color 0.25s;
+
+}
+
+header#adm li a:hover,  header#adm li i:hover{
+
+    color: rgb(153, 33, 33);
+    transition: color 0.25s;
 
 }
 
 header#adm li a{
 
-    position: relative;
+    position: absolute;
 
 }

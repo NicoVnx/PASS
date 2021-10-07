@@ -1,20 +1,18 @@
 header{
 
     max-width: 100%;
-    height: 62px;
+    height: 66px;
     display: flex;
-    margin-top: 20px;
 
 }
 
-header .container{
 
-    width: 42%;
-    margin: auto;
-
-}
 nav#header{
 
+    padding: 0 20%;
+
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -26,9 +24,9 @@ ul#ulpai{
 
     
    height: 100%;
-   width: 40%;
+   width: 20%;
     padding: 0;
-   text-align: center;
+    display: flex;
    align-items: center;
    
 }
@@ -58,8 +56,3 @@ header li a:hover,  header li i:hover{
 
 }
 
-header li a{
-
-    position: absolute;
-
-}
