@@ -17,10 +17,13 @@ var password = '123321'
 
 var erros = []
 
-admin.get("/", (req, res) => {
+var erro = "* Usuário ou senha incorretos"
 
+admin.get("/", (req, res) => {
+var sucesso = 1
+const status = ""
     var userS = req.session.user
-    res.render(views + "admin/login", {userS})
+    res.render(views + "admin/login", {userS, status})
 
 })
 
@@ -29,13 +32,14 @@ admin.post("/home", (req, res) => {
     var userS = req.session.user
 
     if(req.body.user == user && req.body.password == password){
-
+        const status = ""
         req.session.user = user
-        res.render(views + "admin/home", {userS})
+        res.render(views + "admin/home", {userS, status})
         
     }else{
-
-        res.redirect('/admin/')
+        const status = erro || 500
+        console.log(status)
+        res.render(views + 'admin/login', {userS, status})
 
     }
 })

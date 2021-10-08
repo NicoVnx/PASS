@@ -2,20 +2,26 @@ header#adm{
 
     width: 100%;
     max-width: 1350px;
-    height: 62px;
+    height: 66px;
     display: flex;
+    margin: auto;
+
     margin-top: 20px;
 
 }
 
-header#adm .container{
+li.ind{
 
-    width: 42%;
-    margin: auto;
+    margin-left: -100px;
 
 }
+
 #adm nav#header{
 
+    padding: 0 10%;
+
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -27,9 +33,9 @@ header#adm .container{
 
     
    height: 100%;
-   width: 40%;
+   width: 35%;
     padding: 0;
-   text-align: center;
+    display: flex;
    align-items: center;
    
 }
@@ -46,21 +52,16 @@ header#adm .container{
 
 }
 
-header#adm li a{
+#adm header li a{
 
     transition: color 0.25s;
 
 }
 
-header#adm li a:hover,  header#adm li i:hover{
+#adm header li a:hover,  #adm header li i:hover{
 
-    color: rgb(153, 33, 33);
+    color: rgb(240, 130, 0);
     transition: color 0.25s;
 
 }
 
-header#adm li a{
-
-    position: absolute;
-
-}

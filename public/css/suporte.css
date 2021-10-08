@@ -21,7 +21,7 @@
     background-color: rgb(255, 253, 242);
     border: 1px solid rgb(124, 124, 124);
     border-radius: 3px;
-    padding: 3% 4%;
+    padding: 3% 2%;
     max-width: 1020px;
     width: 70%;
     margin: auto;
@@ -97,10 +97,12 @@ transition: border-bottom 0.5s;
 
 #sup textarea{
 
-    width: 55%;
+    width: 70%;
     height: 300px;
     margin: auto;
     resize: none;
+
+    
 
     padding: 10px;
 
@@ -155,5 +157,11 @@ p#sucesso{
 .title.supp{
 
     color: #f09941;
+
+}
+
+.sub.one{
+
+    margin-bottom: 0;
 
 }

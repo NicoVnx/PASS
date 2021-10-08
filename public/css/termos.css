@@ -1,0 +1,45 @@
+.container.sobre{
+
+    text-align: center;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+
+}
+
+.content-sobre{
+
+    width: 60%;
+    margin: 150px auto 300px auto;
+
+}
+
+
+
+.content-sobre p{
+
+    font-size: 19px;
+    font-style: italic;
+    color: #202020;
+
+}
+
+.title.sup{
+
+    color: #575757;
+    font-size: 30px;
+    font-style: italic;
+    margin-bottom: 20px;
+
+}
+
+.sobreTxt{
+
+    padding: 40px;
+    border: 1px solid rgb(161, 161, 161);
+    max-width: 780px;
+    margin: auto;
+    background-color: rgb(255, 253, 242);
+
+}
+

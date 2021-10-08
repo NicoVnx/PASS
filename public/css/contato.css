@@ -166,11 +166,17 @@ padding: 12px;
 }
 
 
-p#sucesso{
+p.sucesso{
 
     font-size: 15px;
     font-style: italic;
     color: rgba(0, 223, 67, 0.87);
+
+}
+
+.sucesso.one{
+
+    margin-bottom: 0;
 
 }
 /*---*/
@@ -259,5 +265,25 @@ p#sucesso{
 .sub.info{
 
     margin-top: 0;
+
+}
+
+.div-termos{
+
+    margin-top:50px;
+
+}
+
+.a-termos{
+
+    text-decoration: underline;
+
+}
+
+.termos{
+
+    font-size: 15px;
+    font-style: italic;
+    color: rgb(78, 78, 78);
 
 }

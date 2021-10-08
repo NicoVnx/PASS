@@ -14,10 +14,9 @@
 
             <h2 class="title ctt">Faça seu Pedido</h2>
 
-            <% if(sucesso == 2){ nomeC = '', email = '', cpfF = '', dataN = '', cep = '', estado = '', cidade = '', 
-            bairro = '', rua = '', numero = '' %>
+            
 
-            <p id="sucesso">Pedido cadastrado com Sucesso! Um email foi enviado para você! Não esqueça de olhar o Spam :)</p> <% } %>  
+              
 
             
 
@@ -26,7 +25,12 @@
             <form id="contato" action="/contato" method="POST" >
                 
 
-<h2 class="sub info">-- Informações pessoais --</h2>
+                <h2 class="sub info">-- Informações pessoais --</h2>
+
+<% if(sucesso == 2){ nomeC = '', email = '', cpfF = '', dataN = '', cep = '', estado = '', cidade = '', 
+            bairro = '', rua = '', numero = '' %>
+                <p class="sucesso one">Pedido cadastrado com Sucesso! Um email foi enviado para você! <p class="sucesso">Não esqueça de olhar o Spam :)</p> </p> <% } %>
+
                 <div id="erros"><% erros.forEach(erro => { %><a>* <%= erro.texto %></a><% }) %></div>
                 <div class="cont i">
 
@@ -148,6 +152,9 @@
                         </div>
 
                     </div>
+
+                    <div class="div-termos"><label for="termos" class="termos">Li e concordo com os <a href="/termos" class="a-termos" target="_blank">Termos & Condições</a> </label><input type="checkbox" id="termos" name="termos"></div>
+
 
                 </div>
 

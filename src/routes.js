@@ -54,6 +54,7 @@ routes.post("/contato", (req, res) => {
   var rua = req.body.rua
   var numero = req.body.numero
   var check = req.body.check
+  var termos = req.body.termos
 
   if(erros.length >= 1){for(var i = 0; i = erros.length; i++){erros.shift()}}
 
@@ -75,7 +76,7 @@ routes.post("/contato", (req, res) => {
 
   //Valida Idade
   if(!req.body.dataNasc || typeof req.body.dataNasc == undefined || req.body.dataNasc == null) {erros.push({texto: "Data de Nascimento inválida"})}
-  else if(TestaMaior18(dataN) < 18) {erros.push({texto: "Você precisa ser maior de idade para continuar!"})}
+  else if(TestaMaior18(dataN) < 18) {erros.push({texto: "Você precisa ser maior de idade para continuar"})}
 
   //Valida CEP
   if(!req.body.cep || typeof req.body.cep == undefined || req.body.cep == null) {erros.push({texto: "CEP inválido"})}
@@ -99,6 +100,8 @@ routes.post("/contato", (req, res) => {
   //Valida Plano
   if(!req.body.check || typeof req.body.check == undefined || req.body.check == null || req.body.check.length <= 0){erros.push({texto: "Selecione ao menos um plano!"})}
 
+  //Valida Termos
+  if(!req.body.termos || typeof req.body.termos == undefined || req.body.termos == null) {erros.push({texto: "Aceite os termos & condições para continuar"})}
 
   if(erros.length > 0 ){
 
@@ -212,5 +215,7 @@ routes.post("/suporte", (req, res) => {
   }
 
 })
+
+routes.get("/termos", (req, res) => res.render( views + "termos" ))
 
 module.exports = routes;
