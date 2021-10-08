@@ -2,13 +2,9 @@
     "version": 2,
     "builds": [
         {
+            "public": "./public",
             "src": "./index.js",
             "use": "@vercel/node"
-        }
-    ],
-    "public": [
-        {
-            "src": "./public"
         }
     ],
     "routes": [
