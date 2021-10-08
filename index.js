@@ -5,6 +5,7 @@ const admin = require("./src/routes-adm")
 const routes = require("./src/routes")
 
 const mongoose = require("mongoose")
+const uri = process.env.DB_URI
 
 const session = require("express-session")
 
@@ -16,7 +17,7 @@ saveUninitialized: true
 
 
 mongoose.Promise = global.Promise
-mongoose.connect("mongodb://localhost/passViagem", {
+mongoose.connect(uri, {
 useNewUrlParser: true,
 useUnifiedTopology: true,
 }).then(() => {
