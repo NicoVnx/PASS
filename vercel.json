@@ -2,8 +2,8 @@
     "version": 2,
     "builds": [
         {
-            "public": "./public",
-            "src": "./index.js",
+            
+            "src": ["./index.js","./public"],
             "use": "@vercel/node"
         }
     ],
