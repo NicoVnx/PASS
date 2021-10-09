@@ -1,7 +1,5 @@
 footer{
 
-    font-family: Georgia, 'Times New Roman', Times, serif;
-
     background-color: rgb(34, 34, 34);
     height: 130px;
     max-height: 130px;
@@ -21,13 +19,13 @@ height: 100%;
 }
 
 footer i,footer p {
-
+font-weight: 400;
     color: white;
 
 }
 
 footer ul li a{
-
+    font-weight: 400;
     font-size: 15px;
     color: white;
 

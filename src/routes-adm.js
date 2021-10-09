@@ -20,7 +20,7 @@ var erros = []
 var erro = "* Usuário ou senha incorretos"
 
 admin.get("/", (req, res) => {
-var sucesso = 1
+
 const status = ""
     var userS = req.session.user
     res.render(views + "admin/login", {userS, status})
