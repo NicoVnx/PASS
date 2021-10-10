@@ -60,7 +60,7 @@ li.ind{
 
 #adm header li a:hover,  #adm header li i:hover{
 
-    color: rgb(240, 130, 0);
+    color: var(--color-tema);
     transition: color 0.25s;
 
 }

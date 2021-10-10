@@ -18,7 +18,7 @@
 
 .color.contato{
     
-    background-color: #ff515a;
+    background-color: var(--color-tema-contato);
 
 }
 
@@ -28,7 +28,6 @@
 
     position: relative;
     z-index: 2;
-background-color: rgb(255, 253, 242);
     display: flex;
     flex-direction: column;
    width: 90%;
@@ -36,7 +35,7 @@ background-color: rgb(255, 253, 242);
    align-items: center;
    padding: 7% 12%;
    border-radius: 3px;
-   border: 1px solid rgb(124, 124, 124);
+   border: 1px solid var(--color-border);
 
 }
 
@@ -79,7 +78,7 @@ margin-top: 30px;
 
 .contt{
 
-     border: 1px solid rgb(160, 160, 160);
+     border: 1px solid var(--color-border);
     border-radius: 3px;
     padding: 12px;
     width: 100%;
@@ -105,7 +104,7 @@ padding: 12px;
 .plano .label{
 
     margin-bottom: 20px;
-    color: rgb(0, 0, 0);
+    color: var(--color-txt-header);
  
 
 }
@@ -192,7 +191,7 @@ p.sucesso{
 
     border-radius: 3px;
     transition: border-bottom 0.75s;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--color-txt-header);
     
 
 }
@@ -230,7 +229,7 @@ p.sucesso{
 .submit i:hover{
 
     transition: color 0.25s;
-    color: #ff515a;
+    color: var(--color-tema-contato);
     cursor: pointer;
     
 
@@ -238,7 +237,7 @@ p.sucesso{
 
 #contato input:focus{
 
-    border-bottom: 2px solid #ff515a;
+    border-bottom: 2px solid var(--color-tema-contato);
     transition: border-bottom 0.25s;
 
 }
@@ -261,7 +260,7 @@ p.sucesso{
 .ctt{
 
     position: relative;
-    color: #ff515a;
+    color: var(--color-tema-contato);
 
 }
 
@@ -294,6 +293,6 @@ p.valor{
 
     font-size: 15px;
     font-style: italic;
-    color: rgb(78, 78, 78);
+    color: var(--color-sub);
 
 }

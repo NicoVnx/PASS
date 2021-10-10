@@ -5,6 +5,30 @@
      
 }
 
+html{
+
+    --bg: rgb(255, 253, 242);
+    --color-txtheader: black;
+    --color-tema: rgb(240, 130, 0);
+    --color-sub: rgb(90, 90, 90);
+    --color-txtone: rgb(70, 70, 70);
+    --color-txttwo: rgb(54, 54, 54);
+
+    --color-txthomedest: #574a36;
+
+    --color-border: rgb(124, 124, 124);
+
+    --color-temacontato: #ff515a;
+    --color-temapages: #f09941;
+
+    --bg-footer: rgb(34, 34, 34);
+    --footer-txt: white;
+
+    
+
+
+}
+
 footer a, footer i, footer p{
 
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -13,7 +37,8 @@ footer a, footer i, footer p{
 
 body{
 
-    background-color:  rgb(255, 253, 242);
+    background-color:  var(--bg);
+
     height: 100%;
 
 }

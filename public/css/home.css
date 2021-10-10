@@ -20,7 +20,7 @@ width: 100%;
 .content-home h1.hiperTitle{
 
    
-    color:rgb(240, 130, 0) ;
+    color:var(--color-tema) ;
 }
 
 .intro{
@@ -46,14 +46,14 @@ width: 40%;
 
     font-weight: 500;
     font-size: 20px;
-    color: rgb(70, 70, 70);
+    color:var(--color-txtone);
     width: 90%;
 
 }
 
 .title.dest{
 
-color: #574a36;
+color: var(--color-txthomedest);
     font-size: 25px;
     font-weight: 600;
     margin: 70px 0 20px 0;
@@ -85,13 +85,12 @@ color: #574a36;
     max-width: 300px;
     font-size: 19px;
     font-weight: 500;
-    color: #50432e;
+    color: var(--color-txthomedest);
 
 }
 
 .place{
-    border-radius: 3px;
-    border: 1px solid rgba(83, 83, 83, 0);
+    
     width: 70%;
     max-width: 800px;
     margin: auto;
@@ -105,7 +104,7 @@ color: #574a36;
 
     margin: auto;
 
-    color: rgb(70, 70, 70);
+    color: var(--color-txtone);
 
   
 }
@@ -131,14 +130,14 @@ color: #574a36;
 
     font-weight: 400;
     font-size: 20px;
-    color: rgb(70, 70, 70);
+    color: var(--color-txtone);
     font-style: oblique;
 
 }
 
 a.aHome{
     font-weight: 400;
-    color: rgb(240, 130, 0);
+    color: var(--color-tema);
     text-decoration: underline;
 
 }
@@ -160,7 +159,7 @@ a.aHome{
 .sobreTxt{
     font-weight: 500;
     width: 50%;
-color: rgb(70, 70, 70);
+color: var(--color-txtone);
     font-size: 20px;
 
 }
@@ -221,6 +220,11 @@ font-weight: 700;
 
 @media only screen and (min-width: 300px) and (max-width: 768px){
 
-    /*conteudo*/
+    .place{
+
+        flex-direction: column;
+        margin-bottom: 200px;
+
+    }
 
 }

@@ -20,26 +20,17 @@
 
     font-size: 19px;
     font-style: italic;
-    color: #202020;
-
-}
-
-.title.sup{
-
-    color: #575757;
-    font-size: 30px;
-    font-style: italic;
-    margin-bottom: 20px;
+    color: var(--color-txtTwo);
 
 }
 
 .sobreTxt{
 
     padding: 40px;
-    border: 1px solid rgb(161, 161, 161);
+    border: 1px solid var(--color-border);
     max-width: 780px;
     margin: auto;
-    background-color: rgb(255, 253, 242);
+
 
 }
 

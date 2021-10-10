@@ -42,8 +42,8 @@
 
     padding: 3.5% 1%;
    
-    background-color: rgb(255, 253, 242);
-    border: 1px solid rgb(124, 124, 124);
+  
+    border: 1px solid var(--color-border);
     border-radius: 3px;
 
 }
@@ -88,7 +88,7 @@
 #box-login input{
 
     border: 0;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--color-txt-header);
     transition: border-bottom 0.5s;
     border-radius: 3px;
     padding: 10px 10px 2px 10px;
@@ -140,8 +140,8 @@
 
 .logado{
 
-    background-color: rgb(255, 253, 242);
-    border: 1px solid rgb(124, 124, 124);
+    
+    border: 1px solid var(--color-border);
     border-radius: 3px;
 
     padding: 5%;
@@ -170,7 +170,7 @@
 
 .logado-nav a{
 
-    color: black;
+    color: var(--color-txt-header);
     transition: color 0.25s
 
 }
