@@ -177,3 +177,50 @@ h1.hiperTitle.homeTitle{
 font-weight: 700;
 
 }
+
+@media only screen and (min-width: 300px) and (max-width: 980px) {
+    .img img{
+
+        width: 250px;
+        height: 130px;
+        
+    }
+
+    .img{
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .content-home .sobreTxt, .content-home .txt{
+
+        margin-left: 100px;
+
+    }
+
+    .title.dest{
+
+        margin-bottom: 50px;
+
+    }
+
+    .intro{
+
+        margin-bottom: 60px;
+
+    };
+}
+
+@media only screen and (min-width: 300px) and (max-width: 680px){
+
+    /*header hamburguer*/
+
+}
+
+@media only screen and (min-width: 300px) and (max-width: 768px){
+
+    /*conteudo*/
+
+}
