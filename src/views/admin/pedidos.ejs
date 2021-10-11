@@ -5,54 +5,51 @@
 
 <body>
     
-    <%- include('../parts/page-headerAdm') %>
+<%- include('../parts/page-headerAdm') %>
      
-   
-<div class="container pedidos">
+    <div class="container pedidos">
 
-    <div class="content-pedidos">
+        <div class="content-pedidos">
 
-        <h1>Pedidos dos usuários</h1>
+            <h1>Pedidos dos usuários</h1>
 
-    <div class= 'pedidos'>
+            <div class= 'pedidos'>
 
-        <% pedidos.forEach(pedido => { %>
+                <% pedidos.forEach(pedido => { %>
 
-            <form action="/admin/editar/<%=pedido._id%> " method="get">
+                    <form action="/admin/editar/<%=pedido._id%> " method="get">
 
-                <div class="pedido">
+                        <div class="pedido">
 
-                    <p>ID - <%= pedido._id %> </p> 
-                    <p>Nome - <%= pedido.nomeCompleto %> </p>
-                    <p>Email - <%= pedido.email %> </p>
-                    <p>CPF - <%= pedido.cpf %> </p>
-                    <p>Data Nascimento - <%= pedido.dataNasc %> </p>
-                    <p>CEP - <%= pedido.cep %> </p>
-                    <p>Estado - <%= pedido.estado %> </p>
-                    <p>Cidade - <%= pedido.cidade %> </p>
-                    <p>Bairro - <%= pedido.bairro %> </p>
-                    <p>Rua - <%= pedido.rua %> </p>
-                    <p>Número - <%= pedido.numero %> </p>
-                    <p>Plano - <%= pedido.check %> </p>
-                    <p>Criado em - <%= pedido.createdAt %> </p>
-<button type="submit">Editar</button>
-                </div>
+                            <p>ID - <%= pedido._id %> </p> 
+                            <p>Nome - <%= pedido.nomeCompleto %> </p>
+                            <p>Email - <%= pedido.email %> </p>
+                            <p>CPF - <%= pedido.cpf %> </p>
+                            <p>Data Nascimento - <%= pedido.dataNasc %> </p>
+                            <p>CEP - <%= pedido.cep %> </p>
+                            <p>Estado - <%= pedido.estado %> </p>
+                            <p>Cidade - <%= pedido.cidade %> </p>
+                            <p>Bairro - <%= pedido.bairro %> </p>
+                            <p>Rua - <%= pedido.rua %> </p>
+                            <p>Número - <%= pedido.numero %> </p>
+                            <p>Plano - <%= pedido.check %> </p>
+                            <p>Criado em - <%= pedido.createdAt %> </p>
+                            <button type="submit">Editar</button>
 
-            
+                        </div>
 
-            </form>
+                    </form>
 
-        <% }) %>
+                <% }) %>
+
+            </div>
+
+        </div>
 
     </div>
 
-    </div>
-
-</div>
-
-
+<%- include('../parts/footer') %>
     
-
 </body>
 
 </html>

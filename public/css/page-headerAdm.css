@@ -1,39 +1,41 @@
 header#adm{
 
-    width: 100%;
-    max-width: 1350px;
+    max-width: 800px;
+    width: 100vw;
     height: 66px;
     display: flex;
     margin: auto;
-
-    margin-top: 20px;
-
-}
-
-li.ind{
-
-    margin-left: -100px;
+    justify-content: center;
 
 }
+
 
 #adm nav#header{
 
-    padding: 0 10%;
-
-    height: 100%;
-    width: 100%;
+    position: fixed;
     display: flex;
-    justify-content: center;
-    text-align: center;
     align-items: center;
+    width: 100%;
+    justify-content: center;
+    padding: 0.4vw 10vw;
+
+}
+
+#adm .mainCont{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 800px;
+    width: 100vw;
+
 
 }
 
 #adm ul#ulpai{
-
     
    height: 100%;
-   width: 35%;
+   width: 70%;
     padding: 0;
     display: flex;
    align-items: center;
@@ -46,22 +48,4 @@ li.ind{
 
 }
 
-#adm li.ponta.ii{
-
-    margin-left: 23%;
-
-}
-
-#adm header li a{
-
-    transition: color 0.25s;
-
-}
-
-#adm header li a:hover,  #adm header li i:hover{
-
-    color: var(--color-tema);
-    transition: color 0.25s;
-
-}
 

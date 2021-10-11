@@ -5,13 +5,14 @@
 
 <body>
 
-    <%- include('../parts/page-header') %>
+<%- include('../parts/page-header') %>
     
     <div class="container login">
 
         <div id="local-login">
 
             <% if(userS){%>
+
                 <div class="title login"><a >Login ADM </a><i class="fas fa-user"></i></div>
                 <div class="logado">
     <p class="logado-user"> Você já estado logado como <%= userS %></p>
@@ -21,27 +22,26 @@
             <%}else{%> 
 
                 <div class="title login"><a >Login ADM </a><i class="fas fa-user"></i></div>
+
                 <div id="box-login">
                     
-                    <a class="erro"> <%= status %>   </a>
+                    <a class="erro"><%= status %></a>
 
                     <form id="login-form" action="/admin/home" method="POST">
-                        <div id="erros"> 
+                      
+                        <div class="flex-login">
 
-                             
-                             
-                            
-                            
+                            <li>
+                                <label for="user">User</label>
+                                <input id="user" name="user" type="text" alt="User" placeholder="Digite o user">
+                            </li>
+
+                            <li>
+                                <label for="senha">Senha</label>
+                                <input id="password" name="password" type="password" alt="Senha" placeholder="Digite o password">
+                            </li>
+
                         </div>
-                                <div class="flex-login">
-
-                                    <li><label for="user">User</label>
-                                        <input id="user" name="user" type="text" alt="User" placeholder="Digite o user"></li>
-
-                                        <li><label for="senha">Senha</label>
-                                            <input id="password" name="password" type="password" alt="Senha" placeholder="Digite o password"></li>
-
-                                </div>
 
                     </form>
 
@@ -54,8 +54,9 @@
         </div>
         
     </div>
-   
+
+<%- include('../parts/footer') %> 
+
 </body>
-<%- include('../parts/footer') %>
 
 </html>   

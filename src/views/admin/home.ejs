@@ -2,21 +2,27 @@
 <html lang="pt-BR">
 
 <%- include('../parts/page-head', { title : 'Login ADM', linkCSS : '../css/home-adm.css'}) %>
-<%- include('../parts/page-headerAdm') %>
-<body>
-    
-    
 
+<body>
+
+<%- include('../parts/page-headerAdm') %>   
+    
     <div class="container homeAdm">
 
         <div class="content-home">
-        <h1 class="hiperTitle ">Home Adm <i class="fas fa-user"></i></h1>
-        <h2 class="sub">-- Bem vindo Administrador :) --</h2>
-        <h3>Você está logado como <%= userS %>. </h3>
-        </div> 
-</div>
 
-    
+            <h1 class="hiperTitle ">Home Adm <i class="fas fa-user"></i></h1>
+
+            <h2 class="sub">-- Bem vindo Administrador :) --</h2>
+            
+            <h3>Você está logado como <%= userS %>. </h3>
+
+        </div> 
+
+    </div>
+
+<%- include('../parts/footer') %>
 
 </body>
+
 </html>   

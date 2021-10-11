@@ -5,20 +5,16 @@
     height: 100%;
     max-width: 1020px;
     
-   width: 75%;
+    width: 75%;
     align-items: center;
     margin: auto;
     margin-bottom: 80px;
-    
-    
 
 }
 
-
-
 .color.contato{
     
-    background-color: var(--color-tema-contato);
+    background-color: var(--color-temacontato);
 
 }
 
@@ -30,16 +26,14 @@
     z-index: 2;
     display: flex;
     flex-direction: column;
-   width: 90%;
-   max-width: 800px;
-   align-items: center;
-   padding: 7% 12%;
-   border-radius: 3px;
-   border: 1px solid var(--color-border);
+    width: 90%;
+    max-width: 800px;
+    align-items: center;
+    padding: 7% 12%;
+    border-radius: 3px;
+    border: 1px solid var(--color-border);
 
 }
-
-
 
 .cont.ii{
 
@@ -62,14 +56,13 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-
-
     
 }
 
 .planos{
+
     width: 100%;
-margin-top: 30px;
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -78,7 +71,7 @@ margin-top: 30px;
 
 .contt{
 
-     border: 1px solid var(--color-border);
+    border: 1px solid var(--color-border);
     border-radius: 3px;
     padding: 12px;
     width: 100%;
@@ -87,9 +80,8 @@ margin-top: 30px;
 }
 
 .plano{
-
    
-padding: 12px;
+    padding: 12px;
     height: 300px;
     width: 200px;
     display: flex;
@@ -104,9 +96,8 @@ padding: 12px;
 .plano .label{
 
     margin-bottom: 20px;
-    color: var(--color-txt-header);
+    color: var(--color-txtheader);
  
-
 }
 
 .separator{
@@ -167,7 +158,6 @@ padding: 12px;
 
 }
 
-
 p.sucesso{
 
     font-size: 15px;
@@ -181,9 +171,12 @@ p.sucesso{
     margin-bottom: 0;
 
 }
-/*---*/
 
+.contt p{
 
+    color: var(--color-txtheader);
+
+}
 
 #contato input, #contato select{
 
@@ -191,13 +184,13 @@ p.sucesso{
 
     border-radius: 3px;
     transition: border-bottom 0.75s;
-    border-bottom: 2px solid var(--color-txt-header);
+    border-bottom: 2px solid var(--color-txtheader);
     
 
 }
 
 #contato input, #contato label{
-
+color: var(--color-txttwo);
     padding: 6px;
 
 }
@@ -229,7 +222,7 @@ p.sucesso{
 .submit i:hover{
 
     transition: color 0.25s;
-    color: var(--color-tema-contato);
+    color: var(--color-temacontato);
     cursor: pointer;
     
 
@@ -237,7 +230,7 @@ p.sucesso{
 
 #contato input:focus{
 
-    border-bottom: 2px solid var(--color-tema-contato);
+    border-bottom: 2px solid var(--color-temacontato);
     transition: border-bottom 0.25s;
 
 }
@@ -260,7 +253,7 @@ p.sucesso{
 .ctt{
 
     position: relative;
-    color: var(--color-tema-contato);
+    color: var(--color-temacontato);
 
 }
 

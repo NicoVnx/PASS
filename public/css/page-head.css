@@ -24,9 +24,6 @@ html{
     --bg-footer: rgb(34, 34, 34);
     --footer-txt: white;
 
-    
-
-
 }
 
 footer a, footer i, footer p{
@@ -37,22 +34,18 @@ footer a, footer i, footer p{
 
 body{
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color:  var(--bg);
 
     height: 100%;
 
 }
 
-/*ul, li, a, i, p, h1, h2, h3, nav, header{
+button{
 
-    background-color: transparent;
-
-}*/
-
-a{
-
-    text-decoration: none;
-    color: black;
+    color: var(--color-txtheader);
 
 }
 
@@ -72,10 +65,10 @@ ul, li{
     justify-content: space-between;
 
 }
-ul li a, i, li a{
+ul li a, i, li a, p, a, select{
 
     text-decoration: none;
-    color: black;
+    color: var(--color-txtheader);
 
 }
 
@@ -95,16 +88,7 @@ input:focus, select:focus{
     
 
 }
-/*.color{
 
-    margin:0;
-    z-index: 0;
-    position: relative;
-    width: 100%;
-    height: 200vh;
-    margin-top: 0;
-
-}*/
 .title{
 
     position: relative;
@@ -113,35 +97,23 @@ input:focus, select:focus{
     margin: 80px auto;
 
 }
-
 .hr{
 
     margin: 50px 0;
     height: 1px;
     width: 100%;
-    border-bottom: 2px dashed rgb(153, 153, 153); 
+    border-bottom: 2px dashed var(--color-border); 
  }
 
  .sub{
 
     font-size: 25px;
     font-style: italic;
-    color: rgb(90, 90, 90);
+    color: var(--color-txtone);
     
 
 }
  
-
-
-/*.color.back{
-
-    position: relative;
-    z-index: 1;
-    height: 400px;
-    margin-top: -1130px;
-    background-color: rgb(102, 90, 23);
-
-}*/
 
 h1.hiperTitle{
 

@@ -1,4 +1,4 @@
-.container.sobre{
+.container.termos{
 
     text-align: center;
     margin: auto;
@@ -7,7 +7,7 @@
 
 }
 
-.content-sobre{
+.content-termos{
 
     width: 60%;
     margin: 150px auto 300px auto;
@@ -16,21 +16,20 @@
 
 
 
-.content-sobre p{
+.content-termos p{
 
     font-size: 19px;
     font-style: italic;
-    color: var(--color-txtTwo);
+    color: var(--color-txttwo);
 
 }
 
-.sobreTxt{
+.termosTxt{
 
     padding: 40px;
     border: 1px solid var(--color-border);
     max-width: 780px;
     margin: auto;
-
 
 }
 

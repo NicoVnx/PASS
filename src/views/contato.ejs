@@ -6,32 +6,25 @@
 
 <body>
     
-    <%- include('parts/page-header') %>
+<%- include('parts/page-header') %>
 
     <div class="container contato">
 
         <div class="content-contato">
 
             <h2 class="title ctt">Faça seu Pedido</h2>
-
-            
-
-              
-
-            
-
-            
             
             <form id="contato" action="/contato" method="POST" >
                 
-
                 <h2 class="sub info">-- Informações pessoais --</h2>
 
-<% if(sucesso == 2){ nomeC = '', email = '', cpfF = '', dataN = '', cep = '', estado = '', cidade = '', 
-            bairro = '', rua = '', numero = '' %>
-                <p class="sucesso one">Pedido cadastrado com Sucesso! Um email foi enviado para você! <p class="sucesso">Não esqueça de olhar o Spam :)</p> </p> <% } %>
+                <% if(sucesso == 2){ nomeC = '', email = '', cpfF = '', dataN = '', 
+                cep = '', estado = '', cidade = '', bairro = '', rua = '', numero = '' %>
+                <p class="sucesso one">Pedido cadastrado com Sucesso! Um email foi enviado para você! <p class="sucesso">Não esqueça de olhar o Spam :)</p> </p> 
+                <% } %>
 
                 <div id="erros"><% erros.forEach(erro => { %><a>* <%= erro.texto %></a><% }) %></div>
+
                 <div class="cont i">
 
                     <ul class="separator pessoais">
@@ -107,56 +100,73 @@
                 </div>
 
                 <div class="hr"></div>
-<h2 class="sub">-- Escolha aqui seu plano de viagem --</h2>
-                <div class="cont ii">
 
-                    
+                <h2 class="sub">-- Escolha aqui seu plano de viagem --</h2>
+
+                <div class="cont ii">  
 
                     <div class="planos">
 
                         <div class="plano i">
-                            <div class="label"><label for="planoi"></i>Cancún - México</label>
-                            <input type="radio" class="check" name="check" id="planoi"  value="cancun" ></div> 
-                           <div class="contt"><p>Ida e volta + 30 dias + Hotel 5 estrelas</p> <p>
-                            
-                            Cancún, uma cidade mexicana situada na Península de Iucatã, 
-                            na costa do Mar do Caribe, é conhecida por suas praias, 
-                            seus vários resorts e sua vida noturna. </p>
-                            <p class="valor">Aeroméxico - R$ 3079,99</p></div>
+                            <div class="label">
+                                <label for="planoi"></i>Cancún - México</label>
+                                <input type="radio" class="check" name="check" id="planoi"  value="cancun">
+                            </div> 
+
+                            <div class="contt">
+                                <p>Ida e volta + 30 dias + Hotel 5 estrelas</p> <p>
+                                Cancún, uma cidade mexicana situada na Península de Iucatã, 
+                                na costa do Mar do Caribe, é conhecida por suas praias, 
+                                seus vários resorts e sua vida noturna. </p>
+                                <p class="valor">Aeroméxico - R$ 3079,99</p>
+                            </div>
 
                         </div>
 
                         <div class="plano ii">
-<div class="label"><label for="planoii">Paris - França</label><input type="radio" class="check" name="check" id="planoii" value="paris"></div>
-                        <div class="contt">
-                            <p>Ida e volta + 25 dias + Hotel 4 estrelas</p>
-                            <p>Centro mundial de arte, moda, gastronomia e cultura. 
-                            Sua paisagem urbana é cortada por avenidas largas 
-                            e pelo rio Sena. A cidade é 
-                            conhecida por monumentos como a Torre Eiffel e a Catedral de
-                             Notre-Dame.</p>
-                             <p class="valor">Latam - R$ 3590,00</p>
-                             </div>
-                            
-                            
 
+                            <div class="label">
+                                <label for="planoii">Paris - França</label>
+                                <input type="radio" class="check" name="check" id="planoii" value="paris">
+                            </div>
+
+                            <div class="contt">
+                                <p>Ida e volta + 25 dias + Hotel 4 estrelas</p>
+                                <p>Centro mundial de arte, moda, gastronomia e cultura. 
+                                Sua paisagem urbana é cortada por avenidas largas 
+                                e pelo rio Sena. A cidade é 
+                                conhecida por monumentos como a Torre Eiffel e a Catedral de
+                                Notre-Dame.</p>
+                                <p class="valor">Latam - R$ 3590,00</p>
+                             </div>
+        
                         </div>
 
                         <div class="plano iii">
-                            <div class="label"><label for="planoiii"></i>Nova Iorque - EUA</label>
-                            <input type="radio" class="check" name="check" id="planoiii" value="ny"></div>
-                            <div class="contt"><p>Ida e volta + 23 dias + Hotel 4 estrelas</p>
-                            <p>Entre seus pontos emblemáticos, destacam-se arranha-céus, 
-                            como o Empire State Building, e o enorme Central Park. O teatro da 
-                            Broadway fica em meio às luzes de neon da Times Square.</p>
-                            <p class="valor">United Air - R$ 3490,99</p></div>
                             
+                            <div class="label">
+                                <label for="planoiii"></i>Nova Iorque - EUA</label>
+                                <input type="radio" class="check" name="check" id="planoiii" value="ny">
+                            </div>
 
+                            <div class="contt">
+                                <p>Ida e volta + 23 dias + Hotel 4 estrelas</p>
+                                <p>Entre seus pontos emblemáticos, destacam-se arranha-céus, 
+                                como o Empire State Building, e o enorme Central Park. O teatro da 
+                                Broadway fica em meio às luzes de neon da Times Square.</p>
+                                <p class="valor">United Air - R$ 3490,99</p>
+                            </div>
+                            
                         </div>
 
                     </div>
 
-                    <div class="div-termos"><label for="termos" class="termos">Li e concordo com os <a href="/termos" class="a-termos" target="_blank">Termos & Condições</a> </label><input type="checkbox" id="termos" name="termos"></div>
+                    <div class="div-termos">
+                        <label for="termos" class="termos">
+                            Li e concordo com os <a href="/termos" class="a-termos" target="_blank">Termos & Condições</a> 
+                        </label>
+                        <input type="checkbox" id="termos" name="termos">
+                    </div>
 
 
                 </div>
@@ -165,15 +175,14 @@
                 <button type="submit" class="submit"> <i class="far fa-check-circle"></i> </button>
 
             </form>
-
             
         </div>
 
-       
 
     </div>
 
-    <%- include('parts/footer') %>
+<%- include('parts/footer') %>
+
 </body>
 
 </html>

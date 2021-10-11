@@ -38,14 +38,15 @@
 .content-sobre p{
 
     font-size: 21px;
-    color: var(--color-txtTwo);
+    color: var(--color-txttwo);
 
 }
 
 
 
+
 .title.sup{
 
-    color: var(--color-tema-pages)
+    color: var(--color-temapages)
 
 }

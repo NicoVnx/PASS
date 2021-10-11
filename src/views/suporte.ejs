@@ -5,44 +5,47 @@
 
 <body>
 
-    <%- include('parts/page-header', { }) %>
+<%- include('parts/page-header', { }) %>
     
-<div class="container suporte">
+    <div class="container suporte">
 
-    <div class="content-suporte">
+        <div class="content-suporte">
 
-        <h2 class="title supp">Suporte ao usuário</h2>
+            <h2 class="title supp">Suporte ao usuário</h2>
 
-        
-        <div class="box-sup">
-
-            <p class="sub one">-- Aqui você pode relatar um problema,</p>
-            <p class="sub">ou alguma mudança que queira fazer no seu pedido --</p>
-
-        <div id="erros"><% erros.forEach(erro => { %> <a>* <%= erro.texto %></a> <% })%></div>
-
-        <% if(sucesso == 2){ emailS = '', sup = '' %> <p id="sucesso">Suporte enviado com sucesso!</p> <% }%> 
-
-        <form id="sup" action="" method="post">
-
-
-            <div><label for="email">Seu Email: </label>
-            <input type="email" name="email" id="email" value="<%=emailS%>"></div>
             
-            <textarea  placeholder="Digite aqui..." name="sup" maxlength="1428"><%=sup%></textarea>
+            <div class="box-sup">
 
-            <button type="submit" class="submit"> <i class="far fa-check-circle"></i> </button>
+                <p class="sub one">-- Aqui você pode relatar um problema,</p>
+                <p class="sub">ou alguma mudança que queira fazer no seu pedido --</p>
 
-        </form>
+                <div id="erros"><% erros.forEach(erro => { %> <a>* <%= erro.texto %></a> <% })%></div>
+
+                <% if(sucesso == 2){ emailS = '', sup = '' %> <p id="sucesso">Suporte enviado com sucesso!</p> <% }%> 
+
+                <form id="sup" action="" method="post">
+
+                    <div>
+                        <label for="email">Seu Email: </label>
+                        <input type="email" name="email" id="email" value="<%=emailS%>">
+                    </div>
+                    
+                    <textarea  placeholder="Digite aqui..." name="sup" maxlength="1428"><%=sup%></textarea>
+
+                    <button type="submit" class="submit"> <i class="far fa-check-circle"></i> </button>
+
+                </form>
+
+            </div>
 
         </div>
-    </div>
 
-</div>
+    </div>
     
+<%- include('parts/footer') %>
 
 </body>
-<%- include('parts/footer') %>
+
 </html>
 
 
