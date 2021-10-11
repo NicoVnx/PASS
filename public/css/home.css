@@ -292,9 +292,44 @@ h1.hiperTitle.homeTitle{
 
     .facatxt{
 
-        width: 80vw;
+        width: 63vw;
         margin: 20px auto 0 auto;
 
+    }
+
+}
+
+@media (max-width: 385px){
+
+    .title{
+
+        font-size: 37px;
+
+    }
+
+    .content-home .sub,.destinos .title.dest{
+        font-size: 20px;
+
+    }
+
+    .title.dest{
+
+        margin-bottom: 120px;
+
+    }
+    h1.hiperTitle.homeTitle{
+
+        font-size: 70px;
+    }
+    .introtxt, .place p, .sobreTxtHome, .facatxt{
+        font-size: 18px;
+        width: 63vw;
+
+    }
+
+    .hr.homehr {
+        
+        margin: 40px 0;
     }
 
 }

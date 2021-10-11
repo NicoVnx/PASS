@@ -125,13 +125,3 @@ h1.hiperTitle{
     font-size: 90px;
     
 }
-
-@media (max-width: 770px){
-
-    p, a, i{
-
-        font-size: 16px;
-
-    }
-
-}

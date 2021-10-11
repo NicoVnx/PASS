@@ -171,3 +171,27 @@
     margin-bottom: 20px;
     
 }
+
+
+
+
+    @media (max-width: 411px){
+
+        .title.login a{
+    
+            font-size: 26px;
+    
+        }
+
+        .logado{
+
+
+            border: 0;
+        }
+
+        .logado p{
+            font-size: 15px;
+            text-align: center;
+        }
+
+    }

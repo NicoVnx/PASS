@@ -47,7 +47,7 @@
 }
 
 #sup{
-
+    text-align: center;
     height: 100%;
     display: flex;
     width: 100%;
@@ -102,7 +102,7 @@ transition: border-bottom 0.5s;
     margin: auto;
     resize: none;
 
-    
+    box-sizing: border-box;
 
     padding: 10px;
 
@@ -160,6 +160,7 @@ p#sucesso{
 }
 
 .title.supp{
+width: 81vw;
 
     color: var(--color-temapages);
 
@@ -168,5 +169,70 @@ p#sucesso{
 .sub.one{
 
     margin-bottom: 0;
+
+}
+
+
+
+@media (max-width: 690px){
+
+    .title.supp{
+
+        font-size: 34px;
+        
+    }
+
+    .content-suporte p{
+
+        font-size: 16px;
+    }
+
+    
+
+}
+
+@media (max-width: 411px){
+
+    .title.supp{
+
+        font-size: 26px;
+        
+    }
+
+    .content-suporte p{
+
+        font-size: 15px;
+    }
+
+    
+
+}
+
+@media (max-width: 885px){
+
+
+    .title.supp{
+
+    
+        margin: 20px auto;
+
+    }
+    .content-suporte{
+        box-sizing: border-box;
+            padding: 5vw;
+        
+        }
+
+        .content-suporte .box-sup{
+
+            border: 0;
+    
+        }
+
+        #sup textarea{
+
+            width: 100%;
+
+        }
 
 }

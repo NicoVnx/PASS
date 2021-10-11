@@ -54,8 +54,10 @@
 
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5vw;
     
 }
 
@@ -64,8 +66,12 @@
     width: 100%;
     margin-top: 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-evenly;
     flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: 5vh;
+    
 
 }
 
@@ -90,6 +96,8 @@
     align-content: center;
     justify-content:center ;
     flex-direction: column;
+
+    margin-bottom: 5vh;
 
 }
 
@@ -146,15 +154,18 @@
     justify-content: center;
     margin: 20px 0;
 
+    gap: 3vw;
+
 }
 
 #erros a{
 
     padding: 5px;
-    font-size: 14px;
+    font-size: 15px;
     font-style: italic;
     color: rgba(255, 0, 0, 0.74);
-    margin-right: 30px;
+    
+    
 
 }
 
@@ -163,6 +174,7 @@ p.sucesso{
     font-size: 15px;
     font-style: italic;
     color: rgba(0, 223, 67, 0.87);
+    text-align: center;
 
 }
 
@@ -272,6 +284,7 @@ p.valor{
 
 .div-termos{
 
+    text-align: center;
     margin-top:50px;
 
 }
@@ -284,8 +297,110 @@ p.valor{
 
 .termos{
 
+    
     font-size: 15px;
     font-style: italic;
     color: var(--color-sub);
+
+}
+
+.content-contato .sub{
+
+    text-align: center;
+
+}
+
+@media (max-width: 1078px){
+
+    #contato{
+
+        padding: 5vw;
+        width: 100%;
+
+    }
+
+    .termos{
+
+        
+        font-size: 18px
+
+    }
+
+    .content-contato .title{
+
+        font-size: 45px;
+        margin-top: 20vh;
+
+    }
+
+    .content-contato .sub{
+
+        font-size: 20px;
+
+    }
+
+}
+
+@media (max-width: 910px){
+
+    #contato{
+        border: 0;
+        padding: 0;
+
+    }
+
+
+
+}
+
+@media (max-width: 690px){
+
+    .content-contato .sub{
+
+        font-size: 17px;
+
+    }
+
+    .content-contato .title{
+
+        font-size: 34px;
+        
+    }
+
+    .content-contato p, .termos{
+
+        font-size: 16px;
+    }
+
+    p.sucesso, #erros a{
+
+        font-size: 13px;
+
+    }
+
+    
+
+}
+
+@media (max-width: 411px){
+
+    .content-contato .title{
+
+        font-size: 26px;
+        
+    }
+
+    .content-contato p, .termos{
+
+        font-size: 15px;
+    }
+
+    p.sucesso, #erros a{
+
+        font-size: 12px;
+
+    }
+
+    
 
 }

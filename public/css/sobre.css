@@ -50,3 +50,44 @@
     color: var(--color-temapages)
 
 }
+
+
+@media (max-width: 450px){
+
+    .title.sup{
+
+        font-size: 37px;
+        
+    }
+
+    .content-sobre p{
+
+        font-size: 16px;
+    }
+
+    
+
+}
+
+@media (max-width: 885px){
+
+
+    .title.sup{
+
+        
+        margin: 30px auto;
+
+    }
+    .content-sobre{
+        box-sizing: border-box;
+            padding: 10vw;
+        
+        }
+
+        .content-sobre .sobreTxt{
+
+            border: 0;
+    
+        }
+
+}
