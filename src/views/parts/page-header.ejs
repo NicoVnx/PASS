@@ -1,36 +1,34 @@
 <header id="main">
 
-    <nav id="header">
+    <div class="mainCont">
+        <a href="/"> <i class="fas fa-home"></i> </a>
 
-        <div class="mainCont">
-
-            <li class="ponta i"><a href="/"> <i class="fas fa-home"> </i></a></li>
+        <nav id="header" >
 
             <ul id="ulpai">
                 
                 <li><a href="/contato"> Faça seu pedido </a></li>
                 <li><a href="/sobre"> Sobre </a></li>
                 <li><a href="/suporte"> Suporte </a></li>
-                    
+
             </ul>
 
             <li class="ponta ii"><a href="/admin/"> Admin </a></li>
-        </div>
 
-        <div class="mainHamb">
+        </nav>
 
-            <h2 class="titleHamb">PASS</h2>
-
-        </div>
+        <button id="btnHamb"><i id="styleHamb" class="fas fa-bars"></i></button> 
 
         <div class="toggle">
-            <input id="switch" type="checkbox" name="theme">
-            <label class="sw" for="switch">Toggle</label>
+                <input id="switch" type="checkbox" name="theme">
+                <label class="sw" for="switch">Toggle</label>
         </div>
 
-    </nav>
-            
+         
+    </div>
+
     <script src="script/scroll.js"></script>
+    <script src="script/btnHamb.js"></script>
 
 </header>
 

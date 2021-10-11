@@ -21,6 +21,8 @@ const initialColors = {
 
     bgFooter: getStyle(html, "--bg-footer"),
     footerTxt: getStyle(html, "--footer-txt"),
+
+    bgHamb: getStyle(html, "--bg-hamb"),
 }
 
 const darkMode = {
@@ -36,6 +38,8 @@ const darkMode = {
 
     bgFooter: "rgb(200, 200, 200)",
     footerTxt: "rgb(35, 35, 35)",
+
+    bgHamb: "rgb(25, 25, 25)",
 }
 
 const transformKey = key => "--" + key.replace(/([A-Z])/, "-$1").toLowerCase()
