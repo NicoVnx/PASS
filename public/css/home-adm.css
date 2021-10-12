@@ -19,3 +19,69 @@
     color: rgb(179, 54, 54);
 
 }
+
+@media (max-width: 1200px){
+
+    .homeAdm h1.hiperTitle{
+
+        font-size: 60px;
+
+    }
+
+    .homeAdm .sub{
+
+        font-size: 20px;
+
+    }
+
+    .homeAdm h3{
+
+        font-size: 18px;
+
+    }
+
+}
+
+@media (max-width: 550px){
+
+    .homeAdm h1.hiperTitle{
+
+        font-size: 50px;
+
+    }
+
+    .homeAdm .sub{
+
+        font-size: 17px;
+
+    }
+
+    .homeAdm h3{
+
+        font-size: 16px;
+
+    }
+
+}
+
+@media (max-width: 425px){
+
+    .homeAdm h1.hiperTitle{
+
+        font-size: 30px;
+
+    }
+
+    .homeAdm .sub{
+
+        font-size: 16px;
+
+    }
+
+    .homeAdm h3{
+
+        font-size: 15px;
+
+    }
+
+}

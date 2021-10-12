@@ -2,7 +2,10 @@
     
     margin: 80px auto;
     display: flex;
-    width:55%;
+    width:100%;
+    max-width: 1300px;
+    padding: 0;
+    box-sizing: border-box;
 
     max-width: 1380px;
     flex-wrap: wrap;
@@ -13,7 +16,9 @@
 .content-pedidos h1{
 
     font-size: 50px;
+    width: 100%;
     color: #dd6b00;
+    text-align: center;
 
 }
 
@@ -30,13 +35,14 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
+    gap: 3vw;
 
 }
 
+
 .pedido{
 
-    margin-bottom: 20px;
-    margin-right: 20px;
+    
     border: 1px solid var(--color-border);
     padding: 10px;
 
@@ -45,5 +51,60 @@
 .pedido button:hover{
 
     cursor: pointer;
+
+}
+
+
+
+@media (max-width: 1330px){
+
+    .content-pedidos{
+
+        padding: 2vw;
+
+    }
+
+}
+
+@media (max-width: 1100px){
+
+    .content-pedidos h1{
+
+        font-size: 40px;
+
+    }
+
+    .pedido p, .pedido button{
+
+        font-size: 18px;
+
+    }
+   
+}
+@media (max-width: 800px){
+
+    .content-pedidos h1{
+
+        font-size: 30px;
+
+    }
+    .pedido p, .pedido button{
+
+        font-size: 16px;
+
+    }
+
+}
+@media (max-width: 425px){
+
+    .content-pedidos h1{
+
+        font-size: 25px;
+
+    }.pedido p, .pedido button{
+
+        font-size: 14px;
+
+    }
 
 }
