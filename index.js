@@ -5,7 +5,7 @@ const admin = require("./src/routes-adm")
 const routes = require("./src/routes")
 
 const mongoose = require("mongoose")
-const uri = 'mongodb+srv://nico:123321@cluster0.rtak1.mongodb.net/passViagem?retryWrites=true&w=majority'
+const uri = 'mongodb+srv://nicolas:our67@cluster0.13u38.mongodb.net/passViagem?retryWrites=true&w=majority'
 
 const session = require("express-session")
 
