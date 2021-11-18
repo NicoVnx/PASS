@@ -59,7 +59,7 @@ header li a:hover, header li i:hover{
 
 }
 
-input[type=checkbox]{
+header input[type=checkbox]{
 
     height: 0;
     width: 0;
